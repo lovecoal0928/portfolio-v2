@@ -9,8 +9,27 @@
     !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600
   }
   header {
-      @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all
-      md:px-10 md:py-6
+      @apply fixed top-0 z-50 flex w-full items-center justify-between px-3 py-3 transition-all
+      md:px-7 md:py-0
+  }
+}
+@layer utilities {
+  h1 {
+    @apply text-2xl font-bold
+  }
+  h2 {
+    @apply text-xl
+  }
+}
+@layer components {
+  /* アイコン画像 */
+  .MyIcon {
+    @apply rounded-full
   }
 
+  /* ヘッダーのサイトマップ */
+  .HeaderLink {
+    @apply cursor-pointer text-base px-6 py-8 h-full transition duration-[.3s]
+    hover:bg-red-600 hover:text-[#ddd]
+  }
 }

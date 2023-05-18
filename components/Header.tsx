@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from "react-dom"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import Image from 'next/image'
 
 const Header=()=>{
     const[isScrolled,setIsScrolled]=useState(false)
@@ -16,15 +17,21 @@ const Header=()=>{
         window.addEventListener("scroll", handleScroll)
     })
     return (
-        <header className={`${!isScrolled?'bg-[#eee] text-[#333]':'bg-[#eee]/70'}`}>
-            <div className='flex items-center space-x-3 md:space-x-10'>
-                <h1>Kaito's Portfolio</h1>
-                    <ul className='hidden space-x-4 md:flex'>
-                        <li><AnchorLink offset={100} href="#top">Top</AnchorLink></li>
-                        <li><AnchorLink href="#prof">About me</AnchorLink></li>
-                        <li><AnchorLink href="#projects">Projects</AnchorLink></li>
-                        <li><AnchorLink href="#skills">Skills</AnchorLink></li>
-                        <li><AnchorLink href="#contact">Contact</AnchorLink></li>
+        <header className={`${!isScrolled?'bg-[#eee] text-[#333]':'bg-[#eee]/80'}`}>
+            <div className='flex items-center space-x-4 md:space-x-6'>
+                <Image
+                    src="/firsticon.png"
+                    width={50}
+                    height={50}
+                    alt="my icon"
+                    className='MyIcon'
+                />
+                    <ul className='hidden md:flex'>
+                            <AnchorLink offset={88} href="#top"><li className='HeaderLink'>Top</li></AnchorLink>
+                            <AnchorLink offset={88} href="#prof"><li className='HeaderLink'>About me</li></AnchorLink>
+                            <AnchorLink offset={88} href="#projects"><li className='HeaderLink'>Projects</li></AnchorLink>
+                            <AnchorLink offset={88} href="#skills"><li className='HeaderLink'>Skills</li></AnchorLink>
+                            <AnchorLink offset={88} href="#contact"><li className='HeaderLink'>Contact</li></AnchorLink>
                     </ul>
             </div>
         </header>
