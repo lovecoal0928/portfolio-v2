@@ -20,7 +20,7 @@ const Header=()=>{
             <div className='flex items-center space-x-3 md:space-x-10'>
                 <h1>Kaito's Portfolio</h1>
                     <ul className='hidden space-x-4 md:flex'>
-                        <li><AnchorLink href="#top">Top</AnchorLink></li>
+                        <li><AnchorLink offset={100} href="#top">Top</AnchorLink></li>
                         <li><AnchorLink href="#prof">About me</AnchorLink></li>
                         <li><AnchorLink href="#projects">Projects</AnchorLink></li>
                         <li><AnchorLink href="#skills">Skills</AnchorLink></li>
