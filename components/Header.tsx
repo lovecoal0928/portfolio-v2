@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from "react-dom"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import Image from 'next/image'
+import Menu from './Menu'
 
 const Header=()=>{
     const[isScrolled,setIsScrolled]=useState(false)
@@ -26,13 +27,19 @@ const Header=()=>{
                     alt="my icon"
                     className='MyIcon'
                 />
-                    <ul className='hidden md:flex'>
-                            <AnchorLink offset={88} href="#top"><li className='HeaderLink'>Top</li></AnchorLink>
-                            <AnchorLink offset={88} href="#prof"><li className='HeaderLink'>About me</li></AnchorLink>
-                            <AnchorLink offset={88} href="#projects"><li className='HeaderLink'>Projects</li></AnchorLink>
-                            <AnchorLink offset={88} href="#skills"><li className='HeaderLink'>Skills</li></AnchorLink>
-                            <AnchorLink offset={88} href="#contact"><li className='HeaderLink'>Contact</li></AnchorLink>
-                    </ul>
+                {/* トップナビゲーション */}
+                <ul className='hidden md:flex'>
+                    <AnchorLink offset={88} href="#top"><li className='HeaderLink'>Top</li></AnchorLink>
+                    <AnchorLink offset={88} href="#prof"><li className='HeaderLink'>About me</li></AnchorLink>
+                    <AnchorLink offset={88} href="#projects"><li className='HeaderLink'>Projects</li></AnchorLink>
+                    <AnchorLink offset={88} href="#skills"><li className='HeaderLink'>Skills</li></AnchorLink>
+                    <AnchorLink offset={88} href="#contact"><li className='HeaderLink'>Contact</li></AnchorLink>
+                </ul>
+
+                <div className='md:hidden'>
+                    <Menu />
+                </div>
+                
             </div>
         </header>
     )
