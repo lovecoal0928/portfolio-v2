@@ -24,7 +24,7 @@ const Home=()=>{
         <Profile />
 
         {/* プロジェクト */}
-        <section>
+        <section id="projects">
           <ProjectRow />
           <ProjectRow />
           <ProjectRow />

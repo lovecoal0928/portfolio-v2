@@ -14,6 +14,31 @@ yarn add -D tailwindcss
 # サーバー起動
 yarn dev
 ```
+## 導入したライブラリ
+
+### スクロールバーカスタマイズできるやつ
+tailwind-scrollbar
+```bash
+yarn add tailwind-scrollbar
+```
+
+### スクロールバー消せるやつ（横スクロールいらんよねって話）
+tailwind-scrollbar-hide
+```bash
+yarn add tailwind-scrollbar-hide
+```
+
+### reactでヌルっとページ内リンク作ってくれるやつ
+react-anchor-link-smooth-scroll
+```bash
+yarn add react-anchor-link-smooth-scroll
+```
+
+### AnchorLinkが正常にインポートできなかったので入れた
+next-swc-loader
+```bash
+yarn add -D @swc/core swc-loader
+```
 
 ## デプロイ先
 ？？？

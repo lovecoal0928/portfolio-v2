@@ -1,9 +1,11 @@
 import React from 'react'
 
 const Banner = () => {
-  return (
-    <div className='bg-green-400'>I am Banner</div>
-  )
+    return (
+        <div id='top' className='mt-[56px] bg-green-400 h-[300px] md:mt-[72px]'>
+            I am Banner
+        </div>
+    )
 }
 
 export default Banner
