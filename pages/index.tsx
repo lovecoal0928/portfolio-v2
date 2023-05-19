@@ -24,7 +24,7 @@ const Home=()=>{
         <Profile />
 
         {/* プロジェクト */}
-        <section id="projects" className=' bg-red-950 w-full text-[#eee]'>
+        <section id="projects" className='bg-red-950 w-full text-[#eee]'>
             <div className='py-6 md:p-10'>
                 <h1 className='flex text-4xl m-6 text-center drop-shadow-RED justify-center'>- My Projects -</h1>
                 <p className='flex font-light text-2xl mb-10 px-5 md:px-0 text-center drop-shadow-RED justify-center'>私がプログラミング勉強し始めてからデプロイした、思い出の作品たちです。</p>

@@ -46,5 +46,10 @@ React Icons
 yarn add react-icons --save
 ```
 
+### グラフの描画のために入れた
+```bash
+npm install -D chart.js react-chartjs-2
+```
+
 ## デプロイ先
 ？？？
