@@ -24,11 +24,11 @@ const Home=()=>{
         <Profile />
 
         {/* プロジェクト */}
-        <section id="projects">
-          <ProjectRow />
-          <ProjectRow />
-          <ProjectRow />
-          <ProjectRow />
+        <section id="projects" className='bg-slate-700 w-full'>
+            <div className='p-10'>
+                <h1 className='flex text-4xl m-6 text-center justify-center'>- My Projects -</h1>
+                <ProjectRow />
+            </div>
         </section>
 
         {/* スキルスタック */}
