@@ -9,25 +9,25 @@ const Profile = () => {
         <div id='prof' className='bg-slate-200 w-full'>
             <div className='p-10'>
                 <h1 className='flex text-4xl m-6 text-center justify-center'>- ABOUT ME -</h1>
-                <div className='my-12 flex justify-center space-x-7'>
+                <div className='md:my-12 flex flex-col items-center text-center md:flex-row md:text-left justify-center md:space-x-7'>
                     <Image
                         src="/prof.jpg"
                         width={300}
                         height={300}
                         alt="my photo"
-                        className=' rounded-lg border-2 border-[#bbb] drop-shadow-Gray min-w-[300px] max-h-[300px]'
+                        className='my-auto rounded-2xl border-2 border-[#bbb] drop-shadow-Gray lg:w-[450px] lg:h-[450px] md:w-[380px] md:h-[380px]'
                     />
-                    <div className='flex flex-col w-[400px] bg-slate-200 space-y-3'>
-                        <div className='flex flex-col w-[170px] text-center space-y-1'>
-                            <p className='text-[1.1rem]'>MIZUTANI KAITO</p>
-                            <h2 className='text-[2.4rem] font-bold'>水谷 海斗</h2>
+                    <div className='flex flex-col w-[390px] md:w-[280px] lg:w-[400px] md:justify-center bg-slate-200 space-y-3'>
+                        <div className='flex flex-col w-full md:w-[250px] md:pb-6 text-center md:space-y-3'>
+                            <p className='text-[1.2rem] md:text-[1.7rem]'>MIZUTANI　KAITO</p>
+                            <h2 className='text-[2.4rem] md:text-[3.6rem] font-bold'>水谷 海斗</h2>
                         </div>
-                        <p>
+                        <p className='lg:text-lg'>
                             アメリカ生まれだけど純血日本人な名古屋育ちのエンジニア。<br/>
                             中学校の頃初めてのPCを家に迎え、CG映像制作、動画制作、ライブ配信活動を経験。<br/>
                             専門学校に入学してからプログラミングの勉強を始めました。
                         </p>
-                        <div className='flex flex-row flex-wrap'>
+                        <div className='flex justify-center md:justify-start flex-row flex-wrap'>
                             <a href='https://github.com/lovecoal0928' target='_blank'>
                                 <div className='SocialBtn1'><FaGithub className='Icon-md'/>GitHub</div>
                             </a>
