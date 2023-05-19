@@ -18,8 +18,8 @@ const Header=()=>{
         window.addEventListener("scroll", handleScroll)
     })
     return (
-        <header className={`${!isScrolled?'bg-[#eee] text-[#333]':'bg-[#eee]/80'}`}>
-            <div className='flex items-center space-x-4 md:space-x-6'>
+        <header className={` text-[#333] drop-shadow-White ${!isScrolled?'bg-[#eee]':'bg-[#eee]/80'}`}>
+            <div className='flex items-center md:space-x-36 lg:space-x-[370px] xl:space-x-[550px]'>
                 <Image
                     src="/firsticon.png"
                     width={50}

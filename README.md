@@ -40,5 +40,11 @@ next-swc-loader
 yarn add -D @swc/core swc-loader
 ```
 
+### アイコンたくさん追加
+React Icons
+```bash
+yarn add react-icons --save
+```
+
 ## デプロイ先
 ？？？

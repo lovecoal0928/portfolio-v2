@@ -9,7 +9,7 @@
     !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-700
   }
   header {
-      @apply fixed top-0 z-30 flex w-full items-center justify-between px-3 py-3 transition-all
+      @apply fixed top-0 z-30 flex w-full items-center justify-center px-3 py-3 transition-all
       md:px-7 md:py-0
   }
 }
@@ -29,8 +29,17 @@
 
   /* ヘッダーのサイトマップ */
   .HeaderLink {
-    @apply cursor-pointer text-center px-6 py-8 h-full transition ease-in-out duration-300
+    @apply cursor-pointer text-center px-6 py-8 h-full text-[#B91C1C] transition ease-in-out duration-300
     hover:bg-red-700 hover:text-[#ddd]
+  }
+
+  /* ソーシャル丸ボタン */
+  .SocialBtn1 {
+    @apply cursor-pointer flex text-[1.1rem] px-5 py-2 mb-3 mr-4 rounded-full shadow-sm shadow-slate-400 items-center leading-normal transition ease-in-out duration-200
+    hover:shadow-gray-400 hover:shadow-md hover:mt-[-4px]
+  }
+  .Icon-md {
+    @apply w-5 h-5 m-1
   }
 
   /* ハンバーガーメニュー全般 */
@@ -44,7 +53,7 @@
     @apply fixed top-0 right-0 h-screen w-60 z-50 bg-[#eee] ease-in-out duration-300
   }
   .MenuCols {
-    @apply cursor-pointer text-xl flex-col text-right p-7 pr-14 transition ease-in-out duration-300
+    @apply cursor-pointer text-xl flex-col text-right p-7 pr-14 text-[#B91C1C] transition ease-in-out duration-300
     hover:bg-red-700 hover:text-[#ddd]
   }
 }
