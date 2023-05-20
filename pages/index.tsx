@@ -1,3 +1,4 @@
+import ProjectModal from '@/components/ProjectModal'
 import Banner from '../components/Banner'
 import Contact from '../components/Contact'
 import Header from '../components/Header'
@@ -7,6 +8,7 @@ import Skills from '../components/Skills'
 import Head from 'next/head'
 
 const Home=()=>{
+
   return (
     <div>
       <Head>
@@ -41,6 +43,8 @@ const Home=()=>{
         <Contact />
 
       </main>
+      {/* プロジェクトモーダル */}
+      <ProjectModal />
     </div>
   )
 }
