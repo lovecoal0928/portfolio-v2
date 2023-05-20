@@ -9,6 +9,7 @@ const ProjectModal = () => {
     const [showModal , setShowModal] = useRecoilState(modalState)
     const [lang, setLang] = useState<Lang[]>([])
     const project = useRecoilValue(projectState)
+    const innerWidth = (0)
 
     useEffect(() => {
         if (!project) return
@@ -43,10 +44,10 @@ const ProjectModal = () => {
                 <div className='text-[#eee] flex flex-col lg:flex-row p-7 md:p-9 lg:p-12 lg:space-x-7'>
                     <div className='relative w-full lg:w-1/2'>
                         <Image
-                            src={project?.src}
+                            src={`${project ? project?.src : '/mmpc-thumb.jpg'}`}
                             width={500}
                             height={500}
-                            alt={project?.name}
+                            alt={`${project ? project?.name : 'ʕ◔ϖ◔ʔ'}`}
                             className='ModalPic'
                         />
                         <h2 className='text-center'>使用技術</h2>
