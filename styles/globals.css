@@ -67,14 +67,37 @@
     transition duration-300 ease-in-out
   }
   .WinHidden {
-    @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[90%] w-[1100px] h-[600px] opacity-0
+    @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[90%] opacity-0
     flex bg-slate-950 z-40 rounded-3xl border-4 border-[#e44] shadow-RED2
     transition duration-500 ease-in-out
+    w-[420px] h-[800px] md:w-[650px] md:h-[750px] lg:w-[800px] lg:h-[600px] xl:w-[1000px] xl:h-[550px]
   }
   .Modalwindow {
-    @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[1100px] h-[600px] opacity-100
+    @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-100
     flex bg-slate-950 z-40 rounded-3xl border-4 border-[#e44] shadow-RED2
     transition duration-500 ease-in-out
+    w-[420px] h-[800px] md:w-[650px] md:h-[750px] lg:w-[800px] lg:h-[600px] xl:w-[1000px] xl:h-[550px]
   }
-
+  .ModalPic {
+    @apply flex mb-3 mx-auto lg:mb-6 border-2 rounded-lg border-[#aaa]
+  }
+  .ModalLangs {
+    @apply flex flex-wrap space-x-4 text-xl font-light mx-5 justify-center
+  }
+  .ModalTitle {
+    @apply lg:flex text-2xl text-center lg:text-left lg:text-3xl lg:tracking-wider mx-3 py-3
+  }
+  .ModalInfo {
+    @apply flex text-base md:text-lg lg:text-xl lg:tracking-wider font-light mx-3 py-3 space-y-2 leading-8
+  }
+  .ModalLinks {
+    @apply flex flex-col md:flex-row lg:flex-col py-3
+  }
+  .ModalLinkBtn {
+    @apply flex text-2xl justify-center lg:justify-start lg:tracking-wider w-full p-4 rounded-md
+    transition ease-in-out duration-150 hover:bg-slate-800
+  }
+  .Gridline {
+    @apply block w-auto h-[1px] bg-[#aaa] my-1 lg:my-3
+  }
 }

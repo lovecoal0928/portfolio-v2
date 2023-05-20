@@ -121,7 +121,7 @@
     },
     {
         "id": 5,
-        "name": "デジタルサイネージ自販機（DEMO）",
+        "name": "デジタルサイネージ自販機",
         "info": "学内コンテストの制作物で、初めて自分でRESTAPIを作成しDjangoとNextjsとを連結して作成したデジタルサイネージのデモサイトです。Djangoが独自で持っているWebインターフェースがとても見やすくデータの管理もしやすかったです。",
         "src": "/mmpc-thumb.jpg",
         "url": "https://github.com/lovecoal0928/vending-front02",

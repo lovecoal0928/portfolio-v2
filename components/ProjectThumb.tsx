@@ -14,7 +14,7 @@ const Project = ({project}: Props) => {
     const [currentProject, setCurrentProject] = useRecoilState(projectState)
 
     return (
-        <div className='pm-5 md:m-5 space-y-3 cursor-pointer hover:drop-shadow-RED transition ease-in-out duration-100'
+        <div className='mb-3 md:m-5 space-y-3 cursor-pointer hover:drop-shadow-RED transition ease-in-out duration-100'
             onClick={() => {
                 setCurrentProject(project)
                 setShowModal(true)
