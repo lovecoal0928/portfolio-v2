@@ -46,6 +46,12 @@ React Icons
 yarn add react-icons --save
 ```
 
+# おなじみの状態管理ライブラリ
+Recoil
+```bash
+yarn add Recoil
+```
+
 ### グラフの描画のために入れた
 ```bash
 npm install -D chart.js react-chartjs-2
