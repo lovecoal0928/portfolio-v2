@@ -5,5 +5,10 @@ export interface Project {
     src: string
     url: string
     repo: string
-    lang: string[]
+    lang: Lang[]
+}
+
+export interface Lang {
+    id: number
+    name: string
 }

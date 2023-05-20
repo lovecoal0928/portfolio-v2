@@ -1,47 +1,156 @@
 [
     {
-        "id":1,
-        "name":"Magical Neon Lyrics",
-        "info":"2022年のマジカルミライと呼ばれるイベントのプログラミングコンテストで制作したWebアプリです。ありがたいことにコンテストに入選し、プロコンの公式生放送やイベント会場での展示など各種メディアにてご紹介させていただけました。初めて学外で実績を残せた作品として思い入れがあります。",
-        "src":"/mmpc-thumb.jpg",
-        "url":"https://magicalmirai.com/10th/procon/entry_10th_app/entry_app01/",
-        "repo":"https://github.com/lovecoal0928/NeonLyrics_MagicalMirai",
-        "lang":["HTML","CSS","Javascript","TextAliveAppAPI"]
+        "id": 1,
+        "name": "Magical Neon Lyrics",
+        "info": "2022年のマジカルミライと呼ばれるイベントのプログラミングコンテストで制作したWebアプリです。ありがたいことにコンテストに入選し、プロコンの公式生放送やイベント会場での展示など各種メディアにてご紹介させていただけました。初めて学外で実績を残せた作品として思い入れがあります。",
+        "src": "/mmpc-thumb.jpg",
+        "url": "https://magicalmirai.com/10th/procon/entry_10th_app/entry_app01/",
+        "repo": "https://github.com/lovecoal0928/NeonLyrics_MagicalMirai",
+        "lang": [
+            {
+                "id": 1,
+                "name": "HTML"
+            },
+            {
+                "id": 2,
+                "name": "CSS"
+            },
+            {
+                "id": 3,
+                "name": "Javascript"
+            },
+            {
+                "id": 4,
+                "name": "TextAliveAppAPI"
+            }
+        ]
     },
     {
-        "id":2,
-        "name":"無駄遣いチェッカー",
-        "info":"初めてハッカソンにチーム開発で出場したときに制作したWebアプリです。私はフロントエンド開発と3Dモデリング、CSSデザインを担当しました。発表日がクリスマスイヴで、雪がよく積もっていたのを覚えてます。",
-        "src":"/tch-thumb.jpg",
-        "url":"https://mudadukai-checker.netlify.app/wallet",
-        "repo":"https://github.com/TechCafe-TeamC/mudadukai-checker",
-        "lang":["Nextjs","TypeScript","Tailwindcss","firebase","GoogleCloudVisionAPI","OCR","Blender","Three.js"]
+        "id": 2,
+        "name": "無駄遣いチェッカー",
+        "info": "初めてハッカソンにチーム開発で出場したときに制作したWebアプリです。私はフロントエンド開発と3Dモデリング、CSSデザインを担当しました。発表日がクリスマスイヴで、雪がよく積もっていたのを覚えてます。",
+        "src": "/tch-thumb.jpg",
+        "url": "https://mudadukai-checker.netlify.app/wallet",
+        "repo": "https://github.com/TechCafe-TeamC/mudadukai-checker",
+        "lang": [
+            {
+                "id": 1,
+                "name": "Nextjs"
+            },
+            {
+                "id": 2,
+                "name": "TypeScript"
+            },
+            {
+                "id": 3,
+                "name": "Tailwindcss"
+            },
+            {
+                "id": 4,
+                "name": "firebase"
+            },
+            {
+                "id": 5,
+                "name": "GoogleCloudVisionAPI"
+            },
+            {
+                "id": 6,
+                "name": "OCR"
+            },
+            {
+                "id": 7,
+                "name": "Blender"
+            },
+            {
+                "id": 8,
+                "name": "Three.js"
+            }
+        ]
     },
     {
-        "id":3,
-        "name":"NetflixCloneApp",
-        "info":"TypescriptとNextjsの勉強のために作ったクローンアプリです。初めてフルスタックで開発したWebサイトでした。今まで触れてこなかったサーバーサイドやWebAPIを活用したアプリ制作を学ぶことができた思い出の作品です。",
-        "src":"/nfca-thumb.jpg",
-        "url":"https://netflix-clone-app-kappa.vercel.app/",
-        "repo":"https://github.com/lovecoal0928/netflix-clone-app",
-        "lang":["Nextjs","TypeScript","Tailwindcss","firebase","TMDB API"]
+        "id": 3,
+        "name": "NetflixCloneApp",
+        "info": "TypescriptとNextjsの勉強のために作ったクローンアプリです。初めてフルスタックで開発したWebサイトでした。今まで触れてこなかったサーバーサイドやWebAPIを活用したアプリ制作を学ぶことができた思い出の作品です。",
+        "src": "/nfca-thumb.jpg",
+        "url": "https://netflix-clone-app-kappa.vercel.app/",
+        "repo": "https://github.com/lovecoal0928/netflix-clone-app",
+        "lang": [
+            {
+                "id": 1,
+                "name": "Nextjs"
+            },
+            {
+                "id": 2,
+                "name": "TypeScript"
+            },
+            {
+                "id": 3,
+                "name": "Tailwindcss"
+            },
+            {
+                "id": 4,
+                "name": "firebase"
+            },
+            {
+                "id": 5,
+                "name": "TMDB API"
+            }
+        ]
     },
     {
-        "id":4,
-        "name":"Kaito's Portfolio",
-        "info":"実は3代目のポートフォリオだったりします。今まではHTMLとJavaScriptで書いていましたが、2年間の集大成としてNextjsを使ってリニューアルしたポートフォリオです。これからこのポートフォリオに書けることをどんどん増やしていきたいです。",
-        "src":"/mmpc-thumb.jpg",
-        "url":"https://magicalmirai.com/10th/procon/entry_10th_app/entry_app01/",
-        "repo":"https://github.com/lovecoal0928/portfolio-v2",
-        "lang":["Nextjs","TypeScript","Tailwindcss"]
+        "id": 4,
+        "name": "Kaito's Portfolio",
+        "info": "実は3代目のポートフォリオだったりします。今まではHTMLとJavaScriptで書いていましたが、2年間の集大成としてNextjsを使ってリニューアルしたポートフォリオです。これからこのポートフォリオに書けることをどんどん増やしていきたいです。",
+        "src": "/mmpc-thumb.jpg",
+        "url": "https://magicalmirai.com/10th/procon/entry_10th_app/entry_app01/",
+        "repo": "https://github.com/lovecoal0928/portfolio-v2",
+        "lang": [
+            {
+                "id": 1,
+                "name": "Nextjs"
+            },
+            {
+                "id": 2,
+                "name": "TypeScript"
+            },
+            {
+                "id": 3,
+                "name": "Tailwindcss"
+            }
+        ]
     },
     {
-        "id":5,
-        "name":"デジタルサイネージ自販機（DEMO）",
-        "info":"学内コンテストの制作物で、初めて自分でRESTAPIを作成しDjangoとNextjsとを連結して作成したデジタルサイネージのデモサイトです。Djangoが独自で持っているWebインターフェースがとても見やすくデータの管理もしやすかったです。",
-        "src":"/mmpc-thumb.jpg",
-        "url":"https://github.com/lovecoal0928/vending-front02",
-        "repo":"https://github.com/lovecoal0928/vending-backend",
-        "lang":["Nextjs","TypeScript","Tailwindcss","Django","postgresQL","REST Framework"]
+        "id": 5,
+        "name": "デジタルサイネージ自販機（DEMO）",
+        "info": "学内コンテストの制作物で、初めて自分でRESTAPIを作成しDjangoとNextjsとを連結して作成したデジタルサイネージのデモサイトです。Djangoが独自で持っているWebインターフェースがとても見やすくデータの管理もしやすかったです。",
+        "src": "/mmpc-thumb.jpg",
+        "url": "https://github.com/lovecoal0928/vending-front02",
+        "repo": "https://github.com/lovecoal0928/vending-backend",
+        "lang": [
+            {
+                "id": 1,
+                "name": "Nextjs"
+            },
+            {
+                "id": 2,
+                "name": "TypeScript"
+            },
+            {
+                "id": 3,
+                "name": "Tailwindcss"
+            },
+            {
+                "id": 4,
+                "name": "Django"
+            },
+            {
+                "id": 5,
+                "name": "postgresQL"
+            },
+            {
+                "id": 6,
+                "name": "REST Framework"
+            }
+        ]
     }
 ]
