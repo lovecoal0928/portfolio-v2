@@ -54,17 +54,13 @@ yarn add Recoil
 
 ### グラフの描画のために入れた
 ```bash
-npm install -D chart.js react-chartjs-2
+yarn add -D chart.js react-chartjs-2
 ```
 
-### おなじみMUI
+### お問合せフォーム用のライブラリ
+node mailer
 ```bash
-yarn add @mui/material @emotion/react @emotion/styled
-```
-
-### おなじみReact Hook Form
-```bash
-yarn add react-hook-form
+yarn add nodemailer
 ```
 
 ## デプロイ先
