@@ -101,7 +101,7 @@
         "id": 4,
         "name": "Kaito's Portfolio",
         "info": "実は3代目のポートフォリオだったりします。今まではHTMLとJavaScriptで書いていましたが、2年間の集大成としてNextjsを使ってリニューアルしたポートフォリオです。これからこのポートフォリオに書けることをどんどん増やしていきたいです。",
-        "src": "/mmpc-thumb.jpg",
+        "src": "/pfv2-thumb.jpg",
         "url": "https://magicalmirai.com/10th/procon/entry_10th_app/entry_app01/",
         "repo": "https://github.com/lovecoal0928/portfolio-v2",
         "lang": [
@@ -123,7 +123,7 @@
         "id": 5,
         "name": "デジタルサイネージ自販機",
         "info": "学内コンテストの制作物で、初めて自分でRESTAPIを作成しDjangoとNextjsとを連結して作成したデジタルサイネージのデモサイトです。Djangoが独自で持っているWebインターフェースがとても見やすくデータの管理もしやすかったです。",
-        "src": "/mmpc-thumb.jpg",
+        "src": "/dsvm-thumb.jpg",
         "url": "https://github.com/lovecoal0928/vending-front02",
         "repo": "https://github.com/lovecoal0928/vending-backend",
         "lang": [
