@@ -48,7 +48,7 @@ const Contact = () => {
                                 <label htmlFor="email" className="FormLabel">
                                     メールアドレス
                                 </label>
-                                <input type="email" className="FormBox" id="email" ref={emailRef} required placeholder="Email"/>
+                                <input type="email" className="FormBox autofill:bg-transparent" id="email" ref={emailRef} required placeholder="Email"/>
                             </div>
                         </div>
                         <div className="flex flex-col mb-3">

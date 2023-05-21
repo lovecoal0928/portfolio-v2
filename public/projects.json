@@ -102,7 +102,7 @@
         "name": "Kaito's Portfolio",
         "info": "実は3代目のポートフォリオだったりします。今まではHTMLとJavaScriptで書いていましたが、2年間の集大成としてNextjsを使ってリニューアルしたポートフォリオです。これからこのポートフォリオに書けることをどんどん増やしていきたいです。",
         "src": "/pfv2-thumb.jpg",
-        "url": "https://magicalmirai.com/10th/procon/entry_10th_app/entry_app01/",
+        "url": "https://kaitos-portfolio.vercel.app/",
         "repo": "https://github.com/lovecoal0928/portfolio-v2",
         "lang": [
             {
