@@ -100,10 +100,17 @@
   .Gridline {
     @apply block w-auto h-[1px] bg-[#aaa] my-1 lg:my-3
   }
+  .GridlineY {
+    @apply block w-[1px] h-auto bg-[#aaa] mx-2 md:mx-6
+  }
 
   /* レーダーチャートボックス */
   .RadarCard {
-    @apply w-[400px] p-6 mx-4 rounded-xl shadow-md shadow-slate-400 transition ease-in-out duration-200
+    @apply flex flex-col md:flex-row xl:flex-col w-[400px] md:w-[700px] xl:w-[380px] p-6 mb-10 mx-auto xl:mx-4 rounded-xl shadow-md shadow-slate-400
+    transition ease-in-out duration-200
     hover:shadow-gray-400 hover:shadow-xl
+  }
+  .RadarText {
+    @apply flex text-base text-left items-center justify-center leading-7 w-[340px] md:w-[350px] xl:w-[320px]
   }
 }

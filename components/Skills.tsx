@@ -38,11 +38,11 @@ const Skills = () => {
     }
     const bData = {
         // back-end
-        labels: ['Python', 'Go', 'PHP', 'PostgreSQL', 'Firebase/GCP', 'WEB API'],
+        labels: ['PostgreSQL', 'Python', 'Go', 'Firebase/GCP', 'PHP', 'WEB API'],
         datasets: [
             {
                 label: 'バックエンド',
-                data: [3,2,1,3,3,4],
+                data: [3,3,2,3,1,4],
                 backgroundColor: 'rgba(70,210,160,0.2)',
                 borderColor: 'rgb(70,210,160)',
                 borderWidth: 3,
@@ -83,37 +83,46 @@ const Skills = () => {
             <div className='py-6 md:p-10'>
                 <h1 className='flex text-4xl m-6 text-center justify-center'>- MY SKILLs -</h1>
                 <p className='flex font-base text-2xl mb-10 px-5 md:px-0 text-center justify-center'>私が今まで身につけたスキルたちをグラフにまとめました。</p>
-                <div className='flex flex-row justify-center items-start mb-5'>
+                <div className='flex flex-col xl:flex-row justify-center items-start mb-5'>
                     <div className='RadarCard'>
-                        <Radar
-                            data={fData}
-                            options={options} 
-                        />
-                        <span className='Gridline'/>
-                        <p className='flex font-base text-md text-left justify-center leading-7 tracking-wider'>
-                            最初はHTMLとCSS、Javascriptから始め、学校の課題や個人制作でアーティストのファンサイトやランディングページを作っていました。<br/>
-                            その後親戚から頂いたレストランのホームページの案件で1～2ヶ月ほどWordPressを触らせていただきました。<br/>
-                            現在はNextjsを使いTypeScriptとTailwindCSSを活用してフロントエンド開発をしています。
+                        <div  className='flex justify-center mx-auto w-[272px]'>
+                            <Radar
+                                data={fData}
+                                options={options} 
+                            />
+                        </div>
+                        <span className='Gridline mx-0 md:GridlineY xl:Gridline xl:mx-0'/>
+                        <p className='RadarText'>
+                            　最初はHTMLとCSS、Javascriptから始め、学校の課題や個人制作でアーティストのファンサイトやランディングページを作っていました。<br/>
+                            　その後親戚から頂いたレストランのホームページの案件で1～2ヶ月ほどWordPressを触らせていただきました。<br/>
+                            　現在はNextjsを使いTypeScriptとTailwindCSSを活用してフロントエンド開発をしています。
                         </p>
                     </div>
                     <div className='RadarCard'>
-                        <Radar
-                            data={bData}
-                            options={options} 
-                        />
-                        <span className='Gridline'/>
-                        <p className='flex font-base text-md text-left justify-center leading-7 tracking-wider'>
-                            学校の授業でPHPを触ったのが最初でした。個人開発ではバックエンドは勉強不足な部分が多いです。
+                        <div className='flex justify-center mx-auto w-[272px]'>
+                            <Radar
+                                data={bData}
+                                options={options} 
+                            />
+                        </div>
+                        <span className='Gridline mx-0 md:GridlineY xl:Gridline xl:mx-0'/>
+                        <p className='RadarText'>
+                            　学校の授業でPHPを触ったのが最初でした。個人開発ではPythonとDjangoをよく使っていました。<br/>
+                            　もっと幅広いWebアプリ制作をするためDjango REST FrameworkでRESTAPIとpostgreSQLを勉強しました。<br/>
+                            　最近はGoogleCloudの豊富なAPIライブラリを勉強するためGCPとFirebaseの勉強をしたり、最近業界で流行りのGo言語の勉強をしています。
                         </p>
                     </div>
                     <div className='RadarCard'>
-                        <Radar
-                            data={dData}
-                            options={options} 
-                        />
-                        <span className='Gridline'/>
-                        <p className='flex font-base text-md text-left justify-center leading-7 tracking-wider'>
-                            私が今まで身につけたスキルたちをグラフにまとめました。
+                        <div  className='flex justify-center mx-auto w-[272px]'>
+                            <Radar
+                                data={dData}
+                                options={options} 
+                            />
+                        </div>
+                        <span className='Gridline mx-0 md:GridlineY xl:Gridline xl:mx-0'/>
+                        <p className='RadarText'>
+                            　FigmaとFigjamを使ってアプリの企画設計とデザインを考えるのが好きで、よく使っています。欲を言えばAdobeシリーズのアプリケーションも使ってみたいのですがちょっと高くて買う勇気が出ないです（笑）。<br/>
+                            　最近Unityを勉強し始め簡単な3Dゲームを作ったりして遊んでいました。BenderやMMDは昔の趣味の延長線上で触っていましたが最近は動画を作る時間が取れなくて悩んでいます。
                         </p>
                     </div>
                 </div>
