@@ -32,31 +32,33 @@ const Contact = () => {
         <div id='contact' className='bg-red-950 w-full text-[#eee]'>
             <div className='py-6 md:p-10'>
                 <h1 className='flex text-4xl m-6 text-center drop-shadow-RED justify-center'>- CONTACT -</h1>
-                <p className='flex font-light text-2xl mb-10 px-5 md:px-0 text-center drop-shadow-RED justify-center'>
+                <p className='flex font-light mx-auto text-2xl px-5 md:px-0 text-center drop-shadow-RED justify-center w-[460px] md:w-[500px] xl:w-[900px]'>
                     最後までご覧いただきありがとうございました。<br/>
                     もしこのサイトや私について何かコメントがありましたら、下記フォームをご利用ください。</p>
-                <div className="container mt-5">
+                <div className="m-5 mx-auto w-[380px] md:w-[600px] xl:w-[900px]">
                     <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}>
-                        <div className="mb-3">
-                            <label htmlFor="name" className="FormLabel">
-                                お名前
-                            </label>
-                            <input type="text" className="FormBox" id="name" ref={nameRef} required />
+                        <div className="flex flex-col xl:flex-row xl:w-full xl:space-x-10 mb-3">
+                            <div className="flex flex-col xl:w-1/2">
+                                <label htmlFor="name" className="FormLabel">
+                                    お名前
+                                </label>
+                                <input type="text" className="FormBox" id="name" ref={nameRef} required placeholder="Name"/>
+                            </div>
+                            <div className="flex flex-col xl:w-1/2">
+                                <label htmlFor="email" className="FormLabel">
+                                    メールアドレス
+                                </label>
+                                <input type="email" className="FormBox" id="email" ref={emailRef} required placeholder="Email"/>
+                            </div>
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="email" className="FormLabel">
-                                メールアドレス
-                            </label>
-                            <input type="email" className="FormBox" id="email" ref={emailRef} required />
-                        </div>
-                        <div className="mb-3">
+                        <div className="flex flex-col mb-3">
                             <label htmlFor="message" className="FormLabel">
                                 メッセージ
                             </label>
-                            <textarea name="message" className="FormBox" id="message" ref={messageRef} required />
+                            <textarea name="message" className="TextAREA" id="message" ref={messageRef} required placeholder="Message"/>
                         </div>
                         <button type="submit" className="SubmitBtn">
-                            送信
+                            送　信
                         </button>
                     </form>
                 </div>
