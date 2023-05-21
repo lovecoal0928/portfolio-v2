@@ -6,6 +6,7 @@ import Profile from '../components/Profile'
 import ProjectRow from '../components/ProjectRow'
 import Skills from '../components/Skills'
 import Head from 'next/head'
+import Footer from '@/components/Footer'
 
 const Home=()=>{
 
@@ -45,6 +46,8 @@ const Home=()=>{
       </main>
       {/* プロジェクトモーダル */}
       <ProjectModal />
+
+      <Footer />
     </div>
   )
 }
