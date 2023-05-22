@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-[#111] h-52'>
-        <div className='flex items-center pt-24 p-10 w-full'>
+    <div className='bg-[#111] w-full h-52 flex items-center justify-center'>
+        <div className='p-5 w-[450px] md:w-[700px] xl:w-[1000px]'>
             <p className='text-xl font-light text-[#ddd]'>&copy; Kaito Mizutani</p>
         </div>
     </div>
