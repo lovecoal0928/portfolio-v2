@@ -10,6 +10,8 @@ import {
     Filler,
 } from 'chart.js'
 import { Radar } from 'react-chartjs-2'
+import { motion } from 'framer-motion'
+
 
 ChartJS.register(
     CategoryScale,
@@ -84,47 +86,83 @@ const Skills = () => {
                 <h1 className='flex text-4xl m-6 text-center justify-center'>- MY SKILLs -</h1>
                 <p className='flex font-base text-2xl mb-10 px-5 md:px-0 text-center justify-center'>私が今まで身につけたスキルたちをグラフにまとめました。</p>
                 <div className='flex flex-col xl:flex-row justify-center items-start mb-5'>
-                    <div className='RadarCard'>
-                        <div  className='flex justify-center mx-auto w-[272px]'>
+                    <motion.div
+                    transition={{ delay: 0.2 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className='RadarCard'>
+                        <motion.div
+                            transition={{ delay: 0.4 }}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className='flex justify-center mx-auto w-[272px]'>
                             <Radar
                                 data={fData}
                                 options={options} 
                             />
-                        </div>
+                        </motion.div>
                         <span className='Gridline mx-0 md:GridlineY xl:Gridline xl:mx-0'/>
-                        <p className='RadarText'>
+                        <motion.p
+                            transition={{ delay: 0.2 }}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className='RadarText'>
                             　最初はHTMLとCSS、Javascriptから始め、学校の課題や個人制作でアーティストのファンサイトやランディングページを作っていました。<br/>
                             　その後親戚から頂いたレストランのホームページの案件で1～2ヶ月ほどWordPressを触らせていただきました。<br/>
                             　現在はNextjsを使いTypeScriptとTailwindCSSを活用してフロントエンド開発をしています。
-                        </p>
-                    </div>
-                    <div className='RadarCard'>
-                        <div className='flex justify-center mx-auto w-[272px]'>
+                        </motion.p>
+                    </motion.div>
+                    <motion.div
+                    transition={{ delay: 0.3 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className='RadarCard'>
+                        <motion.div
+                            transition={{ delay: 0.4 }}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className='flex justify-center mx-auto w-[272px]'>
                             <Radar
                                 data={bData}
                                 options={options} 
                             />
-                        </div>
+                        </motion.div>
                         <span className='Gridline mx-0 md:GridlineY xl:Gridline xl:mx-0'/>
-                        <p className='RadarText'>
+                        <motion.p
+                            transition={{ delay: 0.2 }}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className='RadarText'>
                             　学校の授業でPHPを触ったのが最初でした。個人開発ではPythonとDjangoをよく使っていました。<br/>
                             　もっと幅広いWebアプリ制作をするためDjango REST FrameworkでRESTAPIとpostgreSQLを勉強しました。<br/>
                             　最近はGoogleCloudの豊富なAPIライブラリを勉強するためGCPとFirebaseの勉強をしたり、最近業界で流行りのGo言語の勉強をしています。
-                        </p>
-                    </div>
-                    <div className='RadarCard'>
-                        <div  className='flex justify-center mx-auto w-[272px]'>
+                        </motion.p>
+                    </motion.div>
+                    <motion.div
+                    transition={{ delay: 0.4 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className='RadarCard'>
+                        <motion.div
+                            transition={{ delay: 0.4 }}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className='flex justify-center mx-auto w-[272px]'>
                             <Radar
                                 data={dData}
                                 options={options} 
                             />
-                        </div>
+                        </motion.div>
                         <span className='Gridline mx-0 md:GridlineY xl:Gridline xl:mx-0'/>
-                        <p className='RadarText'>
+                        <motion.p
+                            transition={{ delay: 0.2 }}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            className='RadarText'>
                             　FigmaとFigjamを使ってアプリの企画設計とデザインを考えるのが好きで、よく使っています。欲を言えばAdobeシリーズのアプリケーションも使ってみたいのですがちょっと高くて買う勇気が出ないです（笑）。<br/>
                             　最近Unityを勉強し始め簡単な3Dゲームを作ったりして遊んでいました。BenderやMMDは昔の趣味の延長線上で触っていましたが最近は動画を作る時間が取れなくて悩んでいます。
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
                 </div>
             </div>
         </div>

@@ -135,8 +135,7 @@ select:-webkit-autofill:focus {
   /* レーダーチャートボックス */
   .RadarCard {
     @apply flex flex-col md:flex-row xl:flex-col w-[400px] md:w-[700px] xl:w-[380px] p-6 mb-10 mx-auto xl:mx-4 rounded-xl shadow-md shadow-slate-400
-    transition ease-in-out duration-200
-    hover:shadow-gray-400 hover:shadow-xl
+    hover:duration-300 hover:shadow-gray-400 hover:shadow-xl
   }
   .RadarText {
     @apply flex text-base text-left items-center justify-center leading-7 w-[340px] md:w-[350px] xl:w-[320px]

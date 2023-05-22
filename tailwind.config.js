@@ -30,8 +30,8 @@ module.exports = {
           "100%": { opacity: 1 },
         },
         appear2: {
-          "30%": { opacity: 0 },
-          "60%": { opacity: 1 },
+          "20%": { opacity: 0 },
+          "50%": { opacity: 1 },
           "100%": { opacity: 1 },
         },
       },
