@@ -22,6 +22,23 @@ module.exports = {
         'RED2': ['0 0 50px #C118','0 0 5px #C11',
                 'inset 0 0 50px #C118','inset 0 0 5px #C11',
                 'inset 0 0 30px #C118','inset 0 0 5px #C11'],
+      },
+      keyframes: {
+        appear: {
+          "10%": { opacity: 0 },
+          "40%": { opacity: 1 },
+          "100%": { opacity: 1 },
+        },
+        appear2: {
+          "30%": { opacity: 0 },
+          "60%": { opacity: 1 },
+          "100%": { opacity: 1 },
+        },
+      },
+      animation: {
+        appear: 'appear 4s 0s 1 forwards',
+        appear2: 'appear2 4s 0s 1 forwards',
+
       }
     },
   },
