@@ -20,8 +20,8 @@ select:-webkit-autofill:focus {
 /* html, body, heading */
 @layer base {
   body {
-    @apply bg-[#ddd] text-[#333]
-    !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-700
+    @apply bg-[#450a0a] text-[#333]
+    !scrollbar-thin !scrollbar-track-slate-200 !scrollbar-thumb-red-700
   }
   header {
       @apply fixed top-0 z-30 flex w-full items-center justify-center px-3 py-3 transition-all
@@ -37,6 +37,20 @@ select:-webkit-autofill:focus {
   }
 }
 @layer components {
+  .LoadingBG {
+    @apply flex justify-center items-center w-full h-screen overflow-hidden bg-[rgb(40,6,6)]
+    transition duration-300 ease-in-out
+  }
+  .RingOn {
+    @apply absolute bg-slate-950 mt-[78px] border-[#D82929] drop-shadow-RED shadow-RED border-4 rounded-full w-[400px] h-[400px] md:w-[500px] md:h-[500px]
+    animate-appear2 opacity-0
+  }
+  .RingOn2 {
+    @apply absolute bg-slate-950 mt-[78px] border-[#D82929] shadow-RED border-[14px] rounded-full w-[350px] h-[350px] md:w-[450px] md:h-[450px]
+    animate-appear opacity-0
+  }
+
+
   /* アイコン画像 */
   .MyIcon {
     @apply rounded-full
@@ -50,7 +64,7 @@ select:-webkit-autofill:focus {
 
   /* ソーシャル丸ボタン */
   .SocialBtn1 {
-    @apply cursor-pointer flex text-[1.1rem] px-4 md:px-5 py-2 mb-3 mr-4 rounded-full shadow-sm shadow-slate-400 items-center leading-normal transition ease-in-out duration-200
+    @apply cursor-pointer flex text-[1.1rem] px-4 md:px-5 py-2 mb-3 mr-4 rounded-full shadow-sm shadow-slate-400 items-center leading-normal
     hover:shadow-gray-400 hover:shadow-md hover:mt-[-4px] hover:text-[#B91C1C]
   }
   .Icon-md {
@@ -109,8 +123,7 @@ select:-webkit-autofill:focus {
     @apply flex flex-col md:flex-row lg:flex-col py-3
   }
   .ModalLinkBtn {
-    @apply flex text-2xl justify-center lg:justify-start lg:tracking-wider w-full p-4 rounded-md
-    transition ease-in-out duration-150 hover:bg-slate-800
+    @apply flex text-2xl justify-center lg:justify-start lg:tracking-wider w-full p-4 rounded-md duration-150 hover:bg-slate-800
   }
   .Gridline {
     @apply block w-auto h-[1px] bg-[#aaa] my-1 lg:my-3
@@ -150,4 +163,5 @@ select:-webkit-autofill:focus {
     @apply w-full text-xl font-bold tracking-widest text-[#eee] border-[1px] border-[#aaa] bg-transparent p-3 rounded-md hover:bg-[#eee] hover:text-[#333]
     transition ease-in-out duration-200
   }
+
 }

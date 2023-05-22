@@ -7,11 +7,17 @@ import ProjectRow from '../components/ProjectRow'
 import Skills from '../components/Skills'
 import Head from 'next/head'
 import Footer from '@/components/Footer'
+import { motion } from 'framer-motion'
 
 const Home=()=>{
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <Head>
         <title>Kaito's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -29,8 +35,9 @@ const Home=()=>{
         {/* プロジェクト */}
         <section id="projects" className='bg-red-950 w-full text-[#eee]'>
             <div className='py-6 md:p-10'>
-                <h1 className='flex text-4xl m-6 text-center drop-shadow-RED justify-center'>- MY PROJECTs -</h1>
-                <p className='flex font-light text-2xl mb-10 px-5 md:px-0 text-center drop-shadow-RED justify-center'>私がプログラミング勉強し始めてからデプロイした、思い出の作品たちです。</p>
+                <motion.h1
+                    className='flex text-4xl m-6 text-center drop-shadow-RED justify-center'>- MY PROJECTs -</motion.h1>
+                    <motion.p className='flex font-light text-2xl mb-10 px-5 md:px-0 text-center drop-shadow-RED justify-center'>私がプログラミング勉強し始めてからデプロイした、思い出の作品たちです。</motion.p>
                 <ProjectRow />
             </div>
         </section>
@@ -48,7 +55,7 @@ const Home=()=>{
       <ProjectModal />
 
       <Footer />
-    </div>
+    </motion.div>
   )
 }
 
