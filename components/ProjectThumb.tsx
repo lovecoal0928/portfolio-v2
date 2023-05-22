@@ -3,6 +3,7 @@ import { Project } from "../typings"
 import Image from 'next/image'
 import { modalState, projectState } from '@/atoms/modalAtom'
 import { useRecoilState } from 'recoil'
+import { motion } from 'framer-motion'
 
 interface Props {
     project: Project
@@ -20,6 +21,11 @@ const Project = ({project}: Props) => {
                 setShowModal(true)
             }}
         >
+        <motion.div
+            transition={{delay: 0.2}}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            >
             <Image
                 src={project.src}
                 width={400}
@@ -27,7 +33,12 @@ const Project = ({project}: Props) => {
                 alt=''
                 className='md:w-[500px] rounded-lg border-2 border-slate-50 drop-shadow-Black'
             />
-            <h1 className='font-light drop-shadow-RED'>{project.name}</h1>
+        </motion.div>
+        <motion.h1
+            transition={{delay: 0.2}}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className='font-light drop-shadow-RED'>{project.name}</motion.h1>
         </div>
     )
 }
