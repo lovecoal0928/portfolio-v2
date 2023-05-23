@@ -26,12 +26,12 @@ module.exports = {
       keyframes: {
         appear: {
           "10%": { opacity: 0 },
-          "40%": { opacity: 1 },
+          "50%": { opacity: 1 },
           "100%": { opacity: 1 },
         },
         appear2: {
-          "20%": { opacity: 0 },
-          "50%": { opacity: 1 },
+          "25%": { opacity: 0 },
+          "65%": { opacity: 1 },
           "100%": { opacity: 1 },
         },
       },
