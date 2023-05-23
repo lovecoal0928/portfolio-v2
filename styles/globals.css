@@ -83,31 +83,32 @@ select:-webkit-autofill:focus {
   }
   .MenuCols {
     @apply cursor-pointer text-xl flex-col text-right p-7 pr-14 text-[#B91C1C] transition ease-in-out duration-300
-    hover:bg-red-700 hover:text-[#ddd]
+    hover:bg-red-700 hover:text-[#ddd] active:bg-red-700 active:text-[#ddd]
   }
 
   .ProjectThumb {
-    @apply mb-3 md:m-5 space-y-3 cursor-pointer hover:drop-shadow-RED hover:transition hover:ease-in-out hover:duration-300
+    @apply mb-3 md:m-5 space-y-3 cursor-pointer hover:drop-shadow-RED z-10
+    hover:transition hover:ease-in-out hover:duration-300
   }
 
   /* モーダルウィンドウデザイン */
   .BgHidden {
-    @apply fixed top-0 left-0 h-screen w-full bg-black/50 z-30 opacity-0
+    @apply fixed top-0 left-0 h-screen w-full bg-black/60 z-40 opacity-0
     transition duration-500 ease-in-out
   }
   .Modalbg {
-    @apply fixed top-0 left-0 h-screen w-full bg-black/50 z-30 opacity-100
+    @apply fixed top-0 left-0 h-screen w-full bg-black/60 z-40 opacity-100
     transition duration-500 ease-in-out
   }
   .WinHidden {
     @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0
-    flex bg-slate-950 z-40 rounded-3xl border-4 border-[#e44] shadow-RED2
+    flex bg-slate-950 z-50 rounded-3xl border-4 border-[#e44] shadow-RED2
     transition duration-500 ease-in-out
     w-[420px] h-[800px] md:w-[650px] md:h-[750px] lg:w-[800px] lg:h-[600px] xl:w-[1000px] xl:h-[550px]
   }
   .Modalwindow {
     @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-100
-    flex bg-slate-950 z-40 rounded-3xl border-4 border-[#e44] shadow-RED2
+    flex bg-slate-950 z-50 rounded-3xl border-4 border-[#e44] shadow-RED2
     transition duration-500 ease-in-out
     w-[420px] h-[800px] md:w-[650px] md:h-[750px] lg:w-[800px] lg:h-[600px] xl:w-[1000px] xl:h-[550px]
   }
@@ -138,7 +139,7 @@ select:-webkit-autofill:focus {
 
   /* レーダーチャートボックス */
   .RadarCard {
-    @apply flex flex-col md:flex-row xl:flex-col w-[400px] md:w-[700px] xl:w-[380px] p-6 mb-10 mx-auto xl:mx-4 rounded-xl shadow-md shadow-slate-400
+    @apply flex flex-col md:flex-row xl:flex-col w-[400px] md:w-[700px] xl:w-[380px] p-6 mb-10 mx-auto xl:mx-4 rounded-xl shadow-md shadow-slate-400 z-10
     hover:duration-300 hover:shadow-gray-400 hover:shadow-xl
   }
   .RadarText {
@@ -147,24 +148,23 @@ select:-webkit-autofill:focus {
 
   /* お問い合わせフォーム */
   .FormLabel {
-    @apply text-[#eee] font-light text-xl pt-2
+    @apply text-[#eee] font-light text-xl pt-2 z-10
     transition ease-in-out duration-200 focus:border-b-2 focus:border-[#bbb]
   }
 
   .FormBox {
-    @apply !text-xl !font-light text-[#eee] p-3 bg-transparent border-b-[1px] border-[#999] placeholder-[#fff5]
+    @apply !text-xl !font-light text-[#eee] p-3 z-10 bg-transparent border-b-[1px] border-[#999] placeholder-[#fff5]
     focus:outline-none focus:placeholder-transparent
     autofill:shadow-[inset_0_0_0px_1000px_rgba(69,10,10,1)]
-    
   }
 
   .TextAREA {
-    @apply !text-xl font-light text-[#eee] p-3 bg-transparent border-[1px] rounded-sm border-[#aaa] placeholder-[#fff5] focus:outline-none focus:placeholder-transparent
+    @apply !text-xl font-light text-[#eee] p-3 z-10 bg-transparent border-[1px] rounded-sm border-[#aaa] placeholder-[#fff5] focus:outline-none focus:placeholder-transparent
     !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-700
   }
 
   .SubmitBtn {
-    @apply w-full text-2xl font-bold tracking-[2rem] text-[#eee] border-[1px] border-[#aaa] bg-transparent p-3 rounded-md
+    @apply w-full text-2xl font-bold text-[#eee] z-10 border-[1px] border-[#aaa] bg-transparent p-3 rounded-md
     hover:bg-[#eee] hover:text-[#333]
     transition ease-in-out duration-200
   }

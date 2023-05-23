@@ -83,7 +83,7 @@ const Contact = () => {
                                 transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
                                 viewport={{ once: true, amount: 0.8 }}>
                             <button type="submit" className="SubmitBtn">
-                                送信
+                                送　　信
                             </button>
                         </motion.div>
                     </form>

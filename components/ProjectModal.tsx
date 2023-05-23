@@ -34,8 +34,8 @@ const ProjectModal = () => {
             {/* modalwin */}
             <div className={`${!showModal ? 'WinHidden' : 'Modalwindow'}`}>
                 <div onClick={handleClose} className='cursor-pointer p-5 absolute top-[-50px] right-[-70px] hidden pointer-events-none lg:block lg:pointer-events-auto'>
-                    <div className='w-10 h-1 rounded-xl bg-[#e44] shadow-RED translate-y-1 rotate-45'/>
-                    <div className='w-10 h-1 rounded-xl bg-[#e44] shadow-RED -rotate-45'/>
+                    <div className='w-10 h-1 rounded-full bg-[#e44] shadow-RED translate-y-1 rotate-45'/>
+                    <div className='w-10 h-1 rounded-full bg-[#e44] shadow-RED -rotate-45'/>
                 </div>
                 
                 {/* modalContents */}

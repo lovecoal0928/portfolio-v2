@@ -24,10 +24,10 @@ const Menu = () => {
     return (
         <div className={burger_class} onClick={openMenu}>
             {isMenuClicked
-                ?<div className='fixed right-56 top-0 flex-col p-[23px] space-y-2 ease-in-out duration-300'>
-                    <div className='w-9 h-1 rounded-xl bg-[#eee] translate-y-3 rotate-45'/>
+                ?<div className='fixed right-56 top-0 flex-col p-[23px] space-y-2 cursor-pointer ease-in-out duration-300'>
+                    <div className='w-9 h-1 rounded-full bg-[#e44] shadow-RED translate-y-3 rotate-45'/>
                     <div className='opacity-0'/>
-                    <div className='w-9 h-1 rounded-xl bg-[#eee] -rotate-45'/>
+                    <div className='w-9 h-1 rounded-full bg-[#e44] shadow-RED -rotate-45'/>
                 </div>
                 :<div className='fixed right-0 top-0 flex-col p-[23px] space-y-2 ease-in-out duration-300'>
                     <div className='w-9 h-1 rounded-xl bg-[#333]'/>
