@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const Loading = () => {
 
@@ -9,6 +10,12 @@ const Loading = () => {
         transition={{ duration: 1 }}
         >
             <div className='LoadingBG'>
+                <Image
+                src="/firsticon_x2.png"
+                width={400}
+                height={400}
+                alt="my icon"
+                className='MyIcon opacity-10 mt-[74px]  md:w-[500px] md:h-[500px]'/>
                 <span className='RingOn' />
                 <span className='RingOn2' />
             </div>

@@ -1,4 +1,5 @@
 import React, { useRef } from "react"
+import { motion } from "framer-motion"
 
 const Contact = () => {
 
@@ -38,28 +39,45 @@ const Contact = () => {
                 <div className="m-5 mx-auto w-[380px] md:w-[600px] xl:w-[900px]">
                     <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}>
                         <div className="flex flex-col xl:flex-row xl:w-full xl:space-x-10 mb-3">
-                            <div className="flex flex-col xl:w-1/2">
+                            <motion.div
+                                    transition={{delay: 0.2}}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    className="flex flex-col xl:w-1/2">
                                 <label htmlFor="name" className="FormLabel">
                                     お名前
                                 </label>
                                 <input type="text" className="FormBox" id="name" ref={nameRef} required placeholder="Name"/>
-                            </div>
-                            <div className="flex flex-col xl:w-1/2">
+                            </motion.div>
+                            <motion.div
+                                    transition={{delay: 0.2}}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    className="flex flex-col xl:w-1/2">
                                 <label htmlFor="email" className="FormLabel">
                                     メールアドレス
                                 </label>
                                 <input type="email" className="FormBox autofill:bg-transparent" id="email" ref={emailRef} required placeholder="Email"/>
-                            </div>
+                            </motion.div>
                         </div>
-                        <div className="flex flex-col mb-3">
+                        <motion.div
+                                    transition={{delay: 0.2}}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    className="flex flex-col mb-3">
                             <label htmlFor="message" className="FormLabel">
                                 メッセージ
                             </label>
                             <textarea name="message" className="TextAREA" id="message" ref={messageRef} required placeholder="Message"/>
-                        </div>
-                        <button type="submit" className="SubmitBtn">
-                            送　信
-                        </button>
+                        </motion.div>
+                        <motion.div
+                                    transition={{delay: 0.2}}
+                                    initial={{ opacity: 0, y: 100 }}
+                                    whileInView={{ opacity: 1, y: 0 }}>
+                            <button type="submit" className="SubmitBtn">
+                                送　信
+                            </button>
+                        </motion.div>
                     </form>
                 </div>
             </div>
