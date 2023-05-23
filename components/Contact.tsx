@@ -40,9 +40,11 @@ const Contact = () => {
                     <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}>
                         <div className="flex flex-col xl:flex-row xl:w-full xl:space-x-10 mb-3">
                             <motion.div
-                                    transition={{delay: 0.2}}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                transition={{delay: 0.2}}
+                                initial={{ opacity: 0, y: 200 }}
+                                whileInView={{ opacity: 1, y: 0,
+                                transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
+                                viewport={{ once: true, amount: 0.8 }}
                                     className="flex flex-col xl:w-1/2">
                                 <label htmlFor="name" className="FormLabel">
                                     お名前
@@ -50,9 +52,11 @@ const Contact = () => {
                                 <input type="text" className="FormBox" id="name" ref={nameRef} required placeholder="Name"/>
                             </motion.div>
                             <motion.div
-                                    transition={{delay: 0.2}}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                transition={{delay: 0.2}}
+                                initial={{ opacity: 0, y: 200 }}
+                                whileInView={{ opacity: 1, y: 0,
+                                transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
+                                viewport={{ once: true, amount: 0.8 }}
                                     className="flex flex-col xl:w-1/2">
                                 <label htmlFor="email" className="FormLabel">
                                     メールアドレス
@@ -61,9 +65,11 @@ const Contact = () => {
                             </motion.div>
                         </div>
                         <motion.div
-                                    transition={{delay: 0.2}}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
+                                transition={{delay: 0.2}}
+                                initial={{ opacity: 0, y: 200 }}
+                                whileInView={{ opacity: 1, y: 0,
+                                transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
+                                viewport={{ once: true, amount: 0.8 }}
                                     className="flex flex-col mb-3">
                             <label htmlFor="message" className="FormLabel">
                                 メッセージ
@@ -71,11 +77,13 @@ const Contact = () => {
                             <textarea name="message" className="TextAREA" id="message" ref={messageRef} required placeholder="Message"/>
                         </motion.div>
                         <motion.div
-                                    transition={{delay: 0.2}}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    whileInView={{ opacity: 1, y: 0 }}>
+                                transition={{delay: 0.2}}
+                                initial={{ opacity: 0, y: 200 }}
+                                whileInView={{ opacity: 1, y: 0,
+                                transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
+                                viewport={{ once: true, amount: 0.8 }}>
                             <button type="submit" className="SubmitBtn">
-                                送　信
+                                送信
                             </button>
                         </motion.div>
                     </form>

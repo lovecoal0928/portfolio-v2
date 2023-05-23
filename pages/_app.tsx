@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Loading from '../components/Loading'
 import '../styles/globals.css'
 import { RecoilRoot } from 'recoil'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [loading, setLoading] = useState(true)

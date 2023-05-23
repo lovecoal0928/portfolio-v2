@@ -42,11 +42,11 @@ select:-webkit-autofill:focus {
     transition duration-300 ease-in-out
   }
   .RingOn {
-    @apply absolute bg-transparent mt-[78px] mr-[4px] border-[#D82929] drop-shadow-RED shadow-RED border-4 rounded-full w-[400px] h-[400px] md:w-[500px] md:h-[500px]
+    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] drop-shadow-RED shadow-RED border-4 rounded-full w-[400px] h-[400px] md:w-[500px] md:h-[500px]
     animate-appear2 opacity-0
   }
   .RingOn2 {
-    @apply absolute bg-transparent mt-[78px] mr-[4px] border-[#D82929] shadow-RED border-[10px] rounded-full w-[373px] h-[373px] md:w-[470px] md:h-[470px]
+    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] shadow-RED border-[10px] rounded-full w-[373px] h-[373px] md:w-[470px] md:h-[470px]
     animate-appear opacity-0
   }
 
@@ -86,17 +86,21 @@ select:-webkit-autofill:focus {
     hover:bg-red-700 hover:text-[#ddd]
   }
 
+  .ProjectThumb {
+    @apply mb-3 md:m-5 space-y-3 cursor-pointer hover:drop-shadow-RED hover:transition hover:ease-in-out hover:duration-300
+  }
+
   /* モーダルウィンドウデザイン */
   .BgHidden {
-    @apply fixed top-0 left-0 h-screen w-full bg-black/50 -z-10
-    transition duration-300 ease-in-out delay-300
+    @apply fixed top-0 left-0 h-screen w-full bg-black/50 z-30 opacity-0
+    transition duration-500 ease-in-out
   }
   .Modalbg {
-    @apply fixed top-0 left-0 h-screen w-full bg-black/50 z-30
-    transition duration-300 ease-in-out
+    @apply fixed top-0 left-0 h-screen w-full bg-black/50 z-30 opacity-100
+    transition duration-500 ease-in-out
   }
   .WinHidden {
-    @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[90%] opacity-0
+    @apply fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0
     flex bg-slate-950 z-40 rounded-3xl border-4 border-[#e44] shadow-RED2
     transition duration-500 ease-in-out
     w-[420px] h-[800px] md:w-[650px] md:h-[750px] lg:w-[800px] lg:h-[600px] xl:w-[1000px] xl:h-[550px]
@@ -123,7 +127,7 @@ select:-webkit-autofill:focus {
     @apply flex flex-col md:flex-row lg:flex-col py-3
   }
   .ModalLinkBtn {
-    @apply flex text-2xl justify-center lg:justify-start lg:tracking-wider w-full p-4 rounded-md duration-150 hover:bg-slate-800
+    @apply flex text-2xl justify-center cursor-pointer lg:justify-start lg:tracking-wider w-full p-4 rounded-md duration-150 hover:bg-slate-800
   }
   .Gridline {
     @apply block w-auto h-[1px] bg-[#aaa] my-1 lg:my-3
@@ -144,11 +148,12 @@ select:-webkit-autofill:focus {
   /* お問い合わせフォーム */
   .FormLabel {
     @apply text-[#eee] font-light text-xl pt-2
-    transition ease-in-out duration-200
+    transition ease-in-out duration-200 focus:border-b-2 focus:border-[#bbb]
   }
 
   .FormBox {
-    @apply !text-xl !font-light text-[#eee] p-3 bg-transparent border-b-[1px] border-[#aaa] placeholder-[#fff5] focus:outline-none focus:placeholder-transparent
+    @apply !text-xl !font-light text-[#eee] p-3 bg-transparent border-b-[1px] border-[#999] placeholder-[#fff5]
+    focus:outline-none focus:placeholder-transparent
     autofill:shadow-[inset_0_0_0px_1000px_rgba(69,10,10,1)]
     
   }
@@ -159,7 +164,8 @@ select:-webkit-autofill:focus {
   }
 
   .SubmitBtn {
-    @apply w-full text-xl font-bold tracking-widest text-[#eee] border-[1px] border-[#aaa] bg-transparent p-3 rounded-md hover:bg-[#eee] hover:text-[#333]
+    @apply w-full text-2xl font-bold tracking-[2rem] text-[#eee] border-[1px] border-[#aaa] bg-transparent p-3 rounded-md
+    hover:bg-[#eee] hover:text-[#333]
     transition ease-in-out duration-200
   }
 

@@ -8,7 +8,7 @@ const Loading = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0.2 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
         >
             <div className='LoadingBG'>
                 <Image
@@ -16,7 +16,7 @@ const Loading = () => {
                 width={400}
                 height={400}
                 alt="my icon"
-                className='MyIcon opacity-10 mt-[74px] mr-[4px] md:w-[500px] md:h-[500px]'/>
+                className='MyIcon opacity-10 mt-[64px] md:mt-[88px] mr-[4px] md:w-[500px] md:h-[500px]'/>
                 <span className='RingOn' />
                 <span className='RingOn2' />
             </div>

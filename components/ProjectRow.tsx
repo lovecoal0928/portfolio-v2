@@ -20,7 +20,7 @@ const ProjectRow = () => {
     }, [])
 
     return (
-        <div className='flex text-center'>
+        <div className='flex text-center mb-16'>
             <div className='flex flex-row flex-wrap w-[700px] lg:w-[1300] xl:w-[1700px] items-center justify-center mx-auto'>
                 {projects.length > 0 ? (
                 projects.map((project) => (
