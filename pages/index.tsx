@@ -10,7 +10,7 @@ import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
 
 const Home=()=>{
-
+  
   return (
     <motion.div
       initial={{ opacity: 0.2 }}

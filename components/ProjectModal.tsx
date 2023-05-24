@@ -3,14 +3,12 @@ import { useRecoilState, useRecoilValue } from 'recoil'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Lang } from '@/typings'
-import { motion } from "framer-motion"
 
 const ProjectModal = () => {
 
     const [showModal , setShowModal] = useRecoilState(modalState)
     const [lang, setLang] = useState<Lang[]>([])
     const project = useRecoilValue(projectState)
-    const innerWidth = (0)
 
     useEffect(() => {
         if (!project) return

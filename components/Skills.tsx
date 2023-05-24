@@ -87,7 +87,7 @@ const Skills = () => {
                 <p className='flex font-base text-2xl mb-10 px-5 md:px-0 text-center justify-center'>私が今まで身につけたスキルたちをグラフにまとめました。</p>
                 <div className='flex flex-col xl:flex-row justify-center items-start mb-5'>
                     <motion.div
-                        transition={{delay: 0.2}}
+                        transition={{delay: 0.4}}
                         initial={{ opacity: 0, y: 200 }}
                         whileInView={{ opacity: 1, y: 0,
                         transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}

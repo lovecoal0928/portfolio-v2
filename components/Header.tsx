@@ -25,7 +25,7 @@ const Header=()=>{
                     width={50}
                     height={50}
                     alt="my icon"
-                    className='MyIcon'
+                    className='MyIcon z-30'
                 />
                 {/* トップナビゲーション */}
                 <ul className='hidden md:flex'>

@@ -50,6 +50,10 @@ select:-webkit-autofill:focus {
     animate-appear opacity-0
   }
 
+  .CursorDesign {
+    @apply absolute w-4 h-4 bg-[#D82929] shadow-RED transition-[0.01s] translate-x-1/2 translate-y-1/2 rounded-full z-[100] opacity-100 pointer-events-none
+  }
+
 
   /* アイコン画像 */
   .MyIcon {
@@ -72,14 +76,18 @@ select:-webkit-autofill:focus {
   }
 
   /* ハンバーガーメニュー全般 */
+  .OpenMenuBtn {
+    @apply w-9 h-1 rounded-full bg-[#333] ease-in-out duration-300 opacity-100 rotate-0
+  }
+
   .BurgerClicked {
-    @apply absolute top-0 left-0 flex-row-reverse h-screen w-screen z-20 bg-black/60
+    @apply absolute top-[74px] left-0 flex-row-reverse h-screen w-screen z-20 bg-black/60
   }
   .MenuHidden {
-    @apply fixed top-0 right-[-100%] h-screen w-60 z-30 bg-[#eee] ease-in-out duration-300
+    @apply fixed top-[74px] right-[-100%] h-screen w-60 z-30 bg-[#eee] ease-in-out duration-300
   }
   .MenuVisible {
-    @apply fixed top-0 right-0 h-screen w-60 z-30 bg-[#eee] ease-in-out duration-300
+    @apply fixed top-[74px] right-0 h-screen w-60 z-30 bg-[#eee] ease-in-out duration-300
   }
   .MenuCols {
     @apply cursor-pointer text-xl flex-col text-right p-7 pr-14 text-[#B91C1C] transition ease-in-out duration-300

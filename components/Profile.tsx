@@ -12,7 +12,7 @@ const Profile = () => {
                 <motion.h1 className='flex text-4xl m-6 text-center justify-center'>- ABOUT ME -</motion.h1>
                 <div className='md:my-12 flex flex-col items-center text-center md:flex-row md:text-left justify-center md:space-x-7'>
                     <motion.div
-                            transition={{delay: 0.2}}
+                            transition={{delay: 0.4}}
                             initial={{ opacity: 0, y: 200 }}
                             whileInView={{ opacity: 1, y: 40,
                             transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
@@ -28,7 +28,7 @@ const Profile = () => {
                     </motion.div>
                     <div className='flex flex-col w-[390px] md:w-[280px] lg:w-[400px] md:justify-center bg-slate-200 space-y-3'>
                         <motion.div
-                            transition={{delay: 0.2}}
+                            transition={{delay: 0.4}}
                             initial={{ opacity: 0, y: 200 }}
                             whileInView={{ opacity: 1, y: 40,
                             transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
@@ -38,7 +38,7 @@ const Profile = () => {
                             <h2 className='text-[2.4rem] md:text-[3.6rem] font-bold'>水谷 海斗</h2>
                         </motion.div>
                         <motion.div
-                            transition={{delay: 0.2}}
+                            transition={{delay: 0.4}}
                             initial={{ opacity: 0, y: 200 }}
                             whileInView={{ opacity: 1, y: 40,
                             transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
@@ -51,6 +51,7 @@ const Profile = () => {
                         <div className='flex justify-center md:justify-start flex-row flex-wrap'>
                             <a href='https://github.com/lovecoal0928' target='_blank'>
                                 <motion.div
+                                    transition={{delay: 0.4}}
                                     initial={{ opacity: 0, y: 200 }}
                                     whileInView={{ opacity: 1, y: 40,
                                     transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
@@ -59,6 +60,7 @@ const Profile = () => {
                             </a>
                             <a href='https://twitter.com/lovecoal0928' target='_blank'>
                                 <motion.div
+                                    transition={{delay: 0.4}}
                                     initial={{ opacity: 0, y: 200 }}
                                     whileInView={{ opacity: 1, y: 40,
                                     transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
@@ -67,6 +69,7 @@ const Profile = () => {
                             </a>
                             <a href='https://qiita.com/Coa3' target='_blank'>
                                 <motion.div
+                                    transition={{delay: 0.4}}
                                     initial={{ opacity: 0, y: 200 }}
                                     whileInView={{ opacity: 1, y: 40,
                                     transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
@@ -75,7 +78,7 @@ const Profile = () => {
                             </a>
                             <a href='https://www.nicovideo.jp/user/71360133' target='_blank'>
                                 <motion.div
-                                    transition={{delay: 0.3}}
+                                    transition={{delay: 0.4}}
                                     initial={{ opacity: 0, y: 200 }}
                                     whileInView={{ opacity: 1, y: 40,
                                     transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
@@ -84,6 +87,7 @@ const Profile = () => {
                             </a>
                             <a href='https://www.youtube.com/channel/UC_4haZxancs76oe4QGvR3JA' target='_blank'>
                                 <motion.div
+                                    transition={{delay: 0.4}}
                                     initial={{ opacity: 0, y: 200 }}
                                     whileInView={{ opacity: 1, y: 40,
                                     transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}

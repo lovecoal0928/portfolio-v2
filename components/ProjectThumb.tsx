@@ -16,7 +16,7 @@ const Project = ({project}: Props) => {
 
     return (
         <motion.div
-            transition={{delay: 0.2}}
+            transition={{delay: 0.4}}
             initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 40,
             transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
