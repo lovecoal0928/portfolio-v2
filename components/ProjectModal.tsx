@@ -64,8 +64,8 @@ const ProjectModal = () => {
                         <p className='ModalInfo'>{project?.info}</p>
                         <span className='Gridline'/>
                         <div className='ModalLinks'>
-                            <a className='ModalLinkBtn'>Visit</a>
-                            <a className='ModalLinkBtn'>GitHub Repository</a>
+                            <a className='ModalLinkBtn' href={project?.url} target='_blank'>Visit</a>
+                            <a className='ModalLinkBtn' href={project?.repo} target='_blank'>GitHub Repository</a>
                         </div>
                     </div>
                 </div>
