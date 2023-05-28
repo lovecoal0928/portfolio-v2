@@ -35,10 +35,10 @@ export default async function handler(
         try {
             await sgMail.send(data)
             res.status(200).json({ message: "あなたのメッセージは正常に送信されました"})
+            console.log(res)
         } catch (err) {
-            res
-                .status(500)
-                .json({ message: `メッセージの送信中に予期せぬエラーが発生しました。${err}`})
+            res.status(500).json({ message: `メッセージの送信中に予期せぬエラーが発生しました。${err}`})
+            console.log(res)
         }
     }
 }
