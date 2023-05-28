@@ -44,6 +44,7 @@ const Contact = () => {
         })
         .then((res) => {
             // POST成功
+            console.log(res)
             if (res.status === 200){
                 setValue({ name: "", email: "", message: "",})
                 setLoading(false)
@@ -66,8 +67,6 @@ const Contact = () => {
             ...prevInput,
             [e.target.name]: e.target.value,
         }))
-        
-        console.log(value)
     }
 
     return (

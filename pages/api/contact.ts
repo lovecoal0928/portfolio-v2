@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next"
 const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 type Data = {
-    message: string
+    errmessage: string
 }
 
 type mailContentProps = {
@@ -34,11 +34,9 @@ export default async function handler(
         }
         try {
             await sgMail.send(data)
-            res.status(200).json({ message: "あなたのメッセージは正常に送信されました"})
-            console.log(res)
+            res.status(200).json({ errmessage: "あなたのメッセージは正常に送信されました"})
         } catch (err) {
-            res.status(500).json({ message: `メッセージの送信中に予期せぬエラーが発生しました。${err}`})
-            console.log(res)
+            res.status(500).json({ errmessage: `メッセージの送信中に予期せぬエラーが発生しました。${err}`})
         }
     }
 }
