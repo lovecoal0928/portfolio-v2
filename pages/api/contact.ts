@@ -30,7 +30,7 @@ export default async function handler(
             from: `${process.env.MY_SENDGRID_EMAIL}`,
             subject:  `【Portfolio】${name.toUpperCase()}からのコンタクトメール`,
             text: `Email => ${email}`,
-            html: msg.replace(/\r\n/g, "<br>"),
+            html: msg.replace('\r\n', "<br>"),
         }
         try {
             await sgMail.send(data)

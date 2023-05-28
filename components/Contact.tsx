@@ -44,7 +44,6 @@ const Contact = () => {
         })
         .then((res) => {
             // POST成功
-            console.log(res)
             if (res.status === 200){
                 setValue({ name: "", email: "", message: "",})
                 setLoading(false)
