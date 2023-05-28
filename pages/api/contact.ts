@@ -1,36 +1,44 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import nodemailer from "nodemailer"
+import type { NextApiRequest, NextApiResponse } from "next"
 
-export default function sendGmail(req: NextApiRequest, res: NextApiResponse) {
-    const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth: {
-            user:process.env.GMAILUSER,
-            pass:process.env.GMAILPASS,
-        },
-    })
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+type Data = {
+    message: string
+}
 
-    // 管理人宛
-    const toHostMailData = {
-        from: req.body.email,
-        to:process.env.GMAILUSER,
-        subject: `[お問い合わせ] ${req.body.name}様より`,
-        text: `${req.body.message} Send from ${req.body.email}`,
-        html:`
-            <p>【名前】</p>
-            <p>${req.body.name}</p>
-            <p>【メッセージ】</p>
-            <p>${req.body.message}</p>
-            <p>【メールアドレス】</p>
-            <p>${req.body.email}</p>
-            `,
+type mailContentProps = {
+    name: string,
+    email: string,
+    message: string
+}
+
+export default async function handler(
+    req: NextApiRequest,
+    res: NextApiResponse<Data>
+) {
+    if (req.method == "POST") {
+        const { name, email, message,...props
+        }: mailContentProps = req.body
+
+        const msg =
+        `名前： ${name.toUpperCase()}\r\n
+        メールアドレス： ${email}\r\n
+        メッセージ： ${message}`
+
+        const data = {
+            to: `${process.env.MY_EMAIL}`,
+            from: `${process.env.MY_SENDGRID_EMAIL}`,
+            subject:  `【Portfolio】${name.toUpperCase()}からのコンタクトメール`,
+            text: `Email => ${email}`,
+            html: msg.replace(/\r\n/g, "<br>"),
+        }
+        try {
+            await sgMail.send(data)
+            res.status(200).json({ message: "あなたのメッセージは正常に送信されました"})
+        } catch (err) {
+            res
+                .status(500)
+                .json({ message: `メッセージの送信中に予期せぬエラーが発生しました。${err}`})
+        }
     }
-    transporter.sendMail(toHostMailData, function (err, info) {
-        if (err) console.log(err)
-        else console.log(info)
-    })
-    
-    return res.send("成功しました")
 }
