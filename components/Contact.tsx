@@ -49,12 +49,9 @@ const Contact = () => {
                 setLoading(false)
                 setSuccess(true)
                 setMessageState(res.data.message)
-            } else if(res.status != 500) {
-                setLoading(false)
-                setMessageState(res.data.message)
             } else {
                 setLoading(false)
-                setMessageState('500番エラーです')
+                setMessageState(res.data.message)
             }
         })
         // res.statusが500だったらエラーメッセージ
@@ -129,13 +126,15 @@ const Contact = () => {
                                     <RiLoader5Fill className="h-8 w-8 animate-spin" />
                                 )}
                             </button>
-                            <p>
                                 {success !== false ? (
-                                    messageState
+                                    <p className="font-light text-lg text-emerald-400">
+                                        {messageState}
+                                    </p>
                                 ) : (
-                                    <span>{messageState}</span>
+                                    <p className="font-light text-lg text-red-500">
+                                        {messageState}
+                                    </p>
                                 )}
-                            </p>
                         </motion.div>
                     </form>
                 </div>
