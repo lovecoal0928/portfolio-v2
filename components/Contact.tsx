@@ -54,7 +54,6 @@ const Contact = () => {
                 setMessageState(res.data.message)
             }
         })
-        // res.statusが500だったらエラーメッセージ
         .catch((err) => {
             setLoading(false)
             setMessageState(String(err.message))
