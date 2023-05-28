@@ -48,15 +48,17 @@ const Contact = () => {
                 setValue({ name: "", email: "", message: "",})
                 setLoading(false)
                 setSuccess(true)
-                setMessageState(res.data.errmessage)
+                setMessageState(res.data.message)
+                console.log(res)
             } else {
                 setLoading(false)
-                setMessageState(res.data.errmessage)
+                setMessageState(res.data.message)
+                console.log(res)
             }
         })
         .catch((err) => {
             setLoading(false)
-            setMessageState((err.message))
+            setMessageState(err.message)
             console.log(err)
         })
         setLoading(false)
