@@ -25,7 +25,7 @@ const Contact = () => {
     const [errors, setErrors] = useState<IErrors>({})
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
-    const [messageState, setMessageState] = useState('')
+    const [messageState, setMessageState] = useState(null)
 
     // フォームの入力内容のPOST
     const handleSubmit =async (e:React.FormEvent<HTMLFormElement>) => {
@@ -48,15 +48,15 @@ const Contact = () => {
                 setValue({ name: "", email: "", message: "",})
                 setLoading(false)
                 setSuccess(true)
-                setMessageState(res.data.message)
+                setMessageState(res.data.errmessage)
             } else {
                 setLoading(false)
-                setMessageState(res.data.message)
+                setMessageState(res.data.errmessage)
             }
         })
         .catch((err) => {
             setLoading(false)
-            setMessageState(String(err.message))
+            setMessageState((err.message))
             console.log(err)
         })
         setLoading(false)
@@ -126,11 +126,11 @@ const Contact = () => {
                             </button>
                                 {success !== false ? (
                                     <p className="font-light text-lg text-emerald-400">
-                                        {messageState}
+                                        {messageState || ""}
                                     </p>
                                 ) : (
                                     <p className="font-light text-lg text-red-500">
-                                        {messageState}
+                                        {messageState || ""}
                                     </p>
                                 )}
                         </motion.div>

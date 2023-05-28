@@ -36,7 +36,6 @@ export default async function handler(
             await sgMail.send(data)
             res.status(200).json({ errmessage: "あなたのメッセージは正常に送信されました"})
         } catch (err) {
-            console.log(err)
             res.status(500).json({ errmessage: `メッセージの送信中に予期せぬエラーが発生しました。${err}`})
         }
     }
