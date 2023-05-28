@@ -57,6 +57,7 @@ const Contact = () => {
         .catch((err) => {
             setLoading(false)
             setMessageState(String(err.message))
+            console.log(err)
         })
         setLoading(false)
     }
