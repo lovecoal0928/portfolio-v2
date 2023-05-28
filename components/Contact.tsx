@@ -49,9 +49,12 @@ const Contact = () => {
                 setLoading(false)
                 setSuccess(true)
                 setMessageState(res.data.message)
-            } else {
+            } else if(res.status != 500) {
                 setLoading(false)
                 setMessageState(res.data.message)
+            } else {
+                setLoading(false)
+                setMessageState('500番エラーです')
             }
         })
         // res.statusが500だったらエラーメッセージ
