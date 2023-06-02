@@ -19,7 +19,7 @@ const Profile = () => {
                             viewport={{ once: true, amount: 0.8 }}
                             className='z-10'>
                         <Image
-                            src="/prof.jpg"
+                            src="/prof.svg"
                             width={300}
                             height={300}
                             alt="my photo"

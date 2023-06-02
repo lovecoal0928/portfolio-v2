@@ -20,7 +20,7 @@ const Banner = () => {
             </motion.div>
             <div className='absolute pb-[88px] h-screen w-full flex justify-center items-center'>
                 <Image
-                src="/firsticon_x2.png"
+                src="/firsticon-x2.svg"
                 width={400}
                 height={400}
                 alt="my icon"

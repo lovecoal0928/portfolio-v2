@@ -21,7 +21,7 @@ const Header=()=>{
         <header className={` text-[#333] drop-shadow-White ${!isScrolled?'bg-[#eee]':'bg-[#eee]/80'}`}>
             <div className='flex items-center md:space-x-36 lg:space-x-[370px] xl:space-x-[550px]'>
                 <Image
-                    src="/firsticon.png"
+                    src="/firsticon.svg"
                     width={50}
                     height={50}
                     alt="my icon"

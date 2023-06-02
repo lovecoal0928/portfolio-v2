@@ -12,7 +12,7 @@ const Loading = () => {
         >
             <div className='LoadingBG'>
                 <Image
-                src="/firsticon_x2.png"
+                src="/firsticon-x2.svg"
                 width={400}
                 height={400}
                 alt="my icon"
