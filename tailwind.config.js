@@ -7,10 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'RedCristal' : 'url("/background.svg")',
+      },
       dropShadow: {
         'White': '0 0 7px #eeec',
         'Gray': '0 0 7px #bbb',
         'Black': '0 0 7px #222',
+        'Pink': ['0 0 20px #f11','0 0 5px #faa'],
         'RED': ['0 0 20px #C118','0 0 5px #C11'],
       },
       boxShadow: {
@@ -25,14 +29,20 @@ module.exports = {
       },
       keyframes: {
         appear: {
-          "10%": { opacity: 0 },
-          "50%": { opacity: 1 },
-          "100%": { opacity: 1 },
-        },
-        appear2: {
-          "25%": { opacity: 0 },
-          "65%": { opacity: 1 },
-          "100%": { opacity: 1 },
+          "10%": {
+            opacity: 0.5,
+            borderColor: '#1A1A1C',
+          },
+          "50%": {
+            opacity: 1,
+            borderColor: '#D82929',
+            dropShadow: ['0 0 20px #f11','0 0 5px #faa'],
+          },
+          "100%": {
+            opacity: 1,
+            borderColor: '#D82929',
+            dropShadow: ['0 0 20px #f11','0 0 5px #faa'],
+          },
         },
       },
       animation: {

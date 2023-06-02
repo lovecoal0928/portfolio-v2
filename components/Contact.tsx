@@ -72,10 +72,10 @@ const Contact = () => {
     }
 
     return (
-        <div id='contact' className='bg-red-950 w-full text-[#eee]'>
+        <div id='contact' className='bg-transparent w-full text-[#eee]'>
             <div className='py-6 md:p-10'>
-                <h1 className='flex text-4xl m-6 text-center drop-shadow-RED justify-center'>- CONTACT -</h1>
-                <p className='flex font-light mx-auto text-2xl px-5 md:px-0 text-center drop-shadow-RED justify-center w-[460px] md:w-[500px] xl:w-[900px]'>
+                <h1 className='flex text-4xl m-6 text-center drop-shadow-White justify-center'>- CONTACT -</h1>
+                <p className='flex font-light mx-auto text-2xl px-5 md:px-0 text-center drop-shadow-White justify-center w-[460px] md:w-[500px] xl:w-[900px]'>
                     最後までご覧いただきありがとうございました。<br/>
                     もしこのサイトや私について何かコメントがありましたら、下記フォームをご利用ください。</p>
                 <div className="m-5 mx-auto w-[380px] md:w-[600px] xl:w-[900px]">

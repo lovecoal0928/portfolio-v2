@@ -20,7 +20,7 @@ select:-webkit-autofill:focus {
 /* html, body, heading */
 @layer base {
   body {
-    @apply bg-[#450a0a] text-[#333]
+    @apply bg-RedCristal text-[#333]
     !scrollbar-thin !scrollbar-track-slate-200 !scrollbar-thumb-red-700
   }
   header {
@@ -38,16 +38,16 @@ select:-webkit-autofill:focus {
 }
 @layer components {
   .LoadingBG {
-    @apply flex justify-center items-center w-full h-screen overflow-hidden bg-[rgb(40,6,6)]
+    @apply flex justify-center items-center w-full h-screen overflow-hidden
     transition duration-300 ease-in-out
   }
   .RingOn {
-    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] drop-shadow-RED shadow-RED border-4 rounded-full w-[400px] h-[400px] md:w-[500px] md:h-[500px]
-    animate-appear2 opacity-0
+    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] drop-shadow-Pink border-[6px] md:border-[7px] rounded-full w-[400px] h-[400px] md:w-[500px] md:h-[500px]
+    z-20
   }
   .RingOn2 {
-    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] shadow-RED border-[10px] rounded-full w-[373px] h-[373px] md:w-[470px] md:h-[470px]
-    animate-appear opacity-0
+    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] border-[11px] md:border-[14px] rounded-full w-[376px] h-[376px] md:w-[472px] md:h-[472px]
+    z-20
   }
 
   .CursorDesign {
@@ -95,7 +95,7 @@ select:-webkit-autofill:focus {
   }
 
   .ProjectThumb {
-    @apply mb-3 md:m-5 space-y-3 cursor-pointer hover:drop-shadow-RED z-10
+    @apply mb-3 md:m-5 space-y-3 cursor-pointer hover:drop-shadow-White z-10
     hover:transition hover:ease-in-out hover:duration-300
   }
 
@@ -156,23 +156,23 @@ select:-webkit-autofill:focus {
 
   /* お問い合わせフォーム */
   .FormLabel {
-    @apply text-[#eee] font-light text-xl pt-2 z-10
+    @apply text-[#eee] font-light text-xl pt-2 z-10 drop-shadow-White
     transition ease-in-out duration-200 focus:border-b-2 focus:border-[#bbb]
   }
 
   .FormBox {
-    @apply !text-xl !font-light text-[#eee] p-3 z-10 bg-transparent border-b-[1px] border-[#999] placeholder-[#fff5]
+    @apply !text-xl !font-light text-[#eee] p-3 z-10 bg-transparent border-b-[1px] border-[#eee] placeholder-[#fff5]
     focus:outline-none focus:placeholder-transparent
     autofill:shadow-[inset_0_0_0px_1000px_rgba(69,10,10,1)]
   }
 
   .TextAREA {
-    @apply !text-xl font-light text-[#eee] p-3 z-10 bg-transparent border-[1px] rounded-sm border-[#aaa] placeholder-[#fff5] focus:outline-none focus:placeholder-transparent
+    @apply !text-xl font-light text-[#eee] p-3 z-10 bg-transparent border-[1px] rounded-md border-[#eee] placeholder-[#fff5] focus:outline-none focus:placeholder-transparent
     !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-700
   }
 
   .SubmitBtn {
-    @apply w-full text-2xl font-bold text-[#eee] z-10 border-[1px] border-[#aaa] bg-transparent p-3 rounded-md
+    @apply w-full text-2xl font-bold text-[#eee] z-10 border-[1px] border-[#eee] bg-transparent p-3 rounded-md
     hover:bg-[#eee] hover:text-[#333]
     transition ease-in-out duration-200
   }

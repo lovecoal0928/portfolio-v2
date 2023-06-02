@@ -8,6 +8,8 @@ import Skills from '../components/Skills'
 import Head from 'next/head'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import MainBg from '@/components/MainBg'
 
 const Home=()=>{
   
@@ -25,6 +27,7 @@ const Home=()=>{
       <Header />
 
       <main>
+        <MainBg />
         {/* バナー */}
         <Banner />
 
@@ -32,10 +35,10 @@ const Home=()=>{
         <Profile />
 
         {/* プロジェクト */}
-        <section id="projects" className='bg-red-950 w-full text-[#eee]'>
+        <section id="projects" className='bg-transparent w-full text-[#eee]'>
             <div className='py-6 md:p-10'>
-                <h1 className='flex text-4xl m-6 text-center drop-shadow-RED justify-center'>- MY PROJECTs -</h1>
-                  <p className='flex font-light text-2xl px-5 md:px-0 text-center drop-shadow-RED justify-center'>私がプログラミング勉強し始めてからデプロイした、思い出の作品たちです。</p>
+                <h1 className='flex text-4xl m-6 text-center drop-shadow-White justify-center'>- MY PROJECTs -</h1>
+                  <p className='flex font-light text-2xl px-5 md:px-0 text-center drop-shadow-White justify-center'>私がプログラミング勉強し始めてからデプロイした、思い出の作品たちです。</p>
                 <ProjectRow />
             </div>
         </section>

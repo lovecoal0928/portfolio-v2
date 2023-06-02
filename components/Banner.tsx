@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 const Banner = () => {
 
     return (
-        <div id='top' className='flex mt-[74px] bg-red-950 w-full h-[95vh] md:mt-[88px]'>
+        <div id='top' className='flex mt-[74px] bg-transparent w-full h-[95vh] md:mt-[88px]'>
             <motion.div
                     transition={{ease:'easeInOut', duration: 0.5, delay: 0.3 }}
                     initial={{ opacity: 0, y: -20, scale: 0.6 }}
@@ -24,7 +24,7 @@ const Banner = () => {
                 width={400}
                 height={400}
                 alt="my icon"
-                className='MyIcon drop-shadow-RED md:w-[500px] md:h-[500px]'
+                className='MyIcon drop-shadow-Pink md:w-[500px] md:h-[500px]'
                 />
             </div>
         </div>
