@@ -41,15 +41,6 @@ select:-webkit-autofill:focus {
     @apply flex justify-center items-center w-full h-screen overflow-hidden
     transition duration-300 ease-in-out
   }
-  .RingOn {
-    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] drop-shadow-Pink border-[6px] md:border-[7px] rounded-full w-[400px] h-[400px] md:w-[500px] md:h-[500px]
-    z-20
-  }
-  .RingOn2 {
-    @apply absolute bg-transparent mt-[64px] md:mt-[88px] mr-[4px] border-[#D82929] border-[11px] md:border-[14px] rounded-full w-[376px] h-[376px] md:w-[472px] md:h-[472px]
-    z-20
-  }
-
   .CursorDesign {
     @apply absolute w-4 h-4 bg-[#D82929] shadow-RED transition-[0.01s] translate-x-1/2 translate-y-1/2 rounded-full z-[100] opacity-100 pointer-events-none
   }

@@ -31,17 +31,14 @@ module.exports = {
         appear: {
           "10%": {
             opacity: 0.5,
-            borderColor: '#1A1A1C',
           },
-          "50%": {
+          "70%": {
             opacity: 1,
             borderColor: '#D82929',
-            dropShadow: ['0 0 20px #f11','0 0 5px #faa'],
           },
           "100%": {
             opacity: 1,
             borderColor: '#D82929',
-            dropShadow: ['0 0 20px #f11','0 0 5px #faa'],
           },
         },
       },

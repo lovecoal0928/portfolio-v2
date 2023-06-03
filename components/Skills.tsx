@@ -88,7 +88,7 @@ const Skills = () => {
                 <div className='flex flex-col xl:flex-row justify-center items-start mb-5'>
                     <motion.div
                         transition={{delay: 0.4}}
-                        initial={{ opacity: 0, y: 200 }}
+                        initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0,
                         transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
                         viewport={{ once: true, amount: 0.8 }}
@@ -118,7 +118,7 @@ const Skills = () => {
                     </motion.div>
                     <motion.div
                         transition={{delay: 0.2}}
-                        initial={{ opacity: 0, y: 200 }}
+                        initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0,
                         transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
                         viewport={{ once: true, amount: 0.8 }}
@@ -148,7 +148,7 @@ const Skills = () => {
                     </motion.div>
                     <motion.div
                         transition={{delay: 0.2}}
-                        initial={{ opacity: 0, y: 200 }}
+                        initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0,
                         transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
                         viewport={{ once: true, amount: 0.8 }}
