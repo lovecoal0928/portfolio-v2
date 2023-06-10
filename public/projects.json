@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Magical Neon Lyrics",
         "info": "2022年のマジカルミライと呼ばれるイベントのプログラミングコンテストで制作したWebアプリです。ありがたいことにコンテストに入選し、プロコンの公式生放送やイベント会場での展示など各種メディアにてご紹介させていただけました。初めて学外で実績を残せた作品として思い入れがあります。",
-        "src": "/mmpc-thumb.svg",
+        "src": "/projectThumbs/mmpc-thumb.svg",
         "url": "https://magicalmirai.com/10th/procon/entry_10th_app/entry_app01/",
         "repo": "https://github.com/lovecoal0928/NeonLyrics_MagicalMirai",
         "lang": [
@@ -29,7 +29,7 @@
         "id": 2,
         "name": "無駄遣いチェッカー",
         "info": "初めてハッカソンにチーム開発で出場したときに制作したWebアプリです。私はフロントエンド開発と3Dモデリング、CSSデザインを担当しました。発表日がクリスマスイヴで、雪がよく積もっていたのを覚えてます。",
-        "src": "/tch-thumb.svg",
+        "src": "/projectThumbs/tch-thumb.svg",
         "url": "https://mudadukai-checker.netlify.app/wallet",
         "repo": "https://github.com/TechCafe-TeamC/mudadukai-checker",
         "lang": [
@@ -71,7 +71,7 @@
         "id": 3,
         "name": "NetflixCloneApp",
         "info": "TypescriptとNextjsの勉強のために作ったクローンアプリです。初めてフルスタックで開発したWebサイトでした。今まで触れてこなかったサーバーサイドやWebAPIを活用したアプリ制作を学ぶことができた思い出の作品です。",
-        "src": "/nfca-thumb.svg",
+        "src": "/projectThumbs/nfca-thumb.svg",
         "url": "https://netflix-clone-app-kappa.vercel.app/",
         "repo": "https://github.com/lovecoal0928/netflix-clone-app",
         "lang": [
@@ -101,7 +101,7 @@
         "id": 4,
         "name": "Kaito's Portfolio",
         "info": "実は3代目のポートフォリオだったりします。今まではHTMLとJavaScriptで書いていましたが、2年間の集大成としてNextjsを使ってリニューアルしたポートフォリオです。これからこのポートフォリオに書けることをどんどん増やしていきたいです。",
-        "src": "/pfv2-thumb.svg",
+        "src": "/projectThumbs/pfv2-thumb.svg",
         "url": "https://kaitos-portfolio.vercel.app/",
         "repo": "https://github.com/lovecoal0928/portfolio-v2",
         "lang": [
@@ -123,7 +123,7 @@
         "id": 5,
         "name": "デジタルサイネージ自販機",
         "info": "学内コンテストの制作物で、初めて自分でRESTAPIを作成しDjangoとNextjsとを連結して作成したデジタルサイネージのデモサイトです。Djangoが独自で持っているWebインターフェースがとても見やすくデータの管理もしやすかったです。",
-        "src": "/dsvm-thumb.svg",
+        "src": "/projectThumbs/dsvm-thumb.svg",
         "url": "https://github.com/lovecoal0928/vending-front02",
         "repo": "https://github.com/lovecoal0928/vending-backend",
         "lang": [
