@@ -23,7 +23,7 @@ const Menu = () => {
 
     return (
         <div>
-            <span className={`fixed right-0 top-0 w-full h-full bg-[#eee] ease-in-out opacity-0 duration-200 ${isMenuClicked && 'opacity-100'}`}/>
+            <span className={`fixed right-0 top-0 w-full h-full bg-[#eee] pointer-events-none ease-in-out opacity-0 duration-200 ${isMenuClicked && 'opacity-50'}`}/>
             <div className={burger_class} onClick={openMenu}>
                     <div className='fixed right-0 top-0 flex-col p-[23px] space-y-2 cursor-pointer'>
                         <div className={`OpenMenuBtn ${isMenuClicked && 'bg-[#B91C1C] translate-y-3 rotate-[315deg]'}`}/>
