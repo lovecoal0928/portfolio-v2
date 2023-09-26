@@ -152,5 +152,27 @@
                 "name": "REST Framework"
             }
         ]
+    },
+    {
+        "id": 6,
+        "name": "Androidウィジェット「なびっと」",
+        "info": "技育プロジェクト「DeNA賞」受賞作品。技育マンスリーハッカソンVol.6で受賞し9月に技育キャンプアドバンスで初めて登壇したプロジェクトでした。今までは技術ベースで作りたいものを考えていましたがこの時は友人の助けもありアイデアベースでプロダクトを考えJAVAを使ったアンドロイドウィジェット開発を行いました。",
+        "src": "/projectThumbs/gp6-thumb.jpg",
+        "url": "https://docs.google.com/presentation/d/1eNSYKerYi2UgvW4MvoCx6xKpiD1Cv8eGznoNZN9ZZ34/edit?usp=sharing",
+        "repo": "https://github.com/giiku06",
+        "lang": [
+            {
+                "id": 1,
+                "name": "Java"
+            },
+            {
+                "id": 2,
+                "name": "RapidAPI"
+            },
+            {
+                "id": 3,
+                "name": "NavitimeAPI"
+            }
+        ]
     }
 ]
