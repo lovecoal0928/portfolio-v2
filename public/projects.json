@@ -174,5 +174,35 @@
                 "name": "NavitimeAPI"
             }
         ]
+    },
+    {
+        "id": 7,
+        "name": "Re:Bond",
+        "info": "即席チームで作成したプログレッシブウェブアプリ「Re:Bond」。Tornado2023ハッカソンで作成した作品です。デザイナー、オーナーを含めた5人のチームで8月の1ヶ月を使い開発を行いました。今までとは違うメンバー、違う環境での開発は自分にとってかなりいい刺激でした。",
+        "src": "/projectThumbs/rebo-thumb.jpg",
+        "url": "https://re-bond.vercel.app/",
+        "repo": "https://github.com/Tornado23Team2/Re-Bond",
+        "lang": [
+            {
+                "id": 1,
+                "name": "Nextjs"
+            },
+            {
+                "id": 2,
+                "name": "TypeScript"
+            },
+            {
+                "id": 3,
+                "name": "Tailwindcss"
+            },
+            {
+                "id": 4,
+                "name": "firebase"
+            },
+            {
+                "id":5,
+                "name": "next-pwa"
+            }
+        ]
     }
 ]
