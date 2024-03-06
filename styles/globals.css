@@ -158,7 +158,7 @@ select:-webkit-autofill:focus {
   }
 
   .TextAREA {
-    @apply !text-xl font-light text-[#eee] p-3 z-10 bg-transparent border-[1px] rounded-md border-[#eee] placeholder-[#fff5] focus:outline-none focus:placeholder-transparent
+    @apply !text-xl font-light text-[#eee] !min-h-[250px] max-h-[250px] p-3 z-10 bg-transparent border-[1px] rounded-md border-[#eee] placeholder-[#fff5] focus:outline-none focus:placeholder-transparent
     !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-700
   }
 
