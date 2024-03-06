@@ -8,7 +8,6 @@ import Skills from '../components/Skills'
 import Head from 'next/head'
 import Footer from '@/components/Footer'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import MainBg from '@/components/MainBg'
 
 const Home=()=>{
