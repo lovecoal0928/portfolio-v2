@@ -1,10 +1,6 @@
-import React, { useRef, useState } from "react"
+import React, { use, useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { validate } from "@/utils/validate"
-import axios from "axios"
-import Input from "./forms/Input"
-import TextArea from "./forms/TextArea"
-import { RiLoader5Fill } from "react-icons/ri"
+import { set, useForm } from "react-hook-form"
 
 // 受信したメッセージの型定義
 interface IValues {
@@ -12,64 +8,63 @@ interface IValues {
     email: string
     message: string
 }
-interface IErrors extends Partial<IValues> {}
 
 const Contact = () => {
-    // フォームの入力内容の格納先
-    const [value, setValue] = useState({
-        name: "",
-        email: "",
-        message: "",
-    })
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isValid }
+    } = useForm<IValues>({ mode: "onChange" })
 
-    const [errors, setErrors] = useState<IErrors>({})
-    const [loading, setLoading] = useState(false)
-    const [success, setSuccess] = useState(false)
-    const [messageState, setMessageState] = useState(null)
-
-    // フォームの入力内容のPOST
-    const handleSubmit =async (e:React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        const errors = validate(value)
-        if (errors && Object.keys(errors).length > 0){
-            return setErrors(errors)
+    const [showToast, setShowToast] = useState(false)
+    useEffect(() => {
+        if (showToast) {
+            const timer = setTimeout(() => {
+                setShowToast(false)
+            }, 5000)
+            return () => clearTimeout(timer)
         }
-        setErrors({})
-        setLoading(true)
-        // フォームの入力内容をメールの成形してるとこに投げる
-        axios.post("/api/contact", {
-            name: value.name,
-            email: value.email,
-            message: value.message,
-        })
-        .then((res) => {
-            // POST成功
-            if (res.status === 200){
-                setValue({ name: "", email: "", message: "",})
-                setLoading(false)
-                setSuccess(true)
-                setMessageState(res.data.message)
-                console.log(res)
-            } else {
-                setLoading(false)
-                setMessageState(res.data.message)
-                console.log(res)
+    }, [showToast])
+
+    const [ContactFlg, setContactFlg] = useState(false)
+    const [toast, setToast] = useState('')
+
+    const handleToast = () => {
+        setShowToast(true)
+    }
+
+    const onSubmit = handleSubmit(async(data: IValues) => {
+        if(isValid) {
+            const formData = new FormData()
+            Object.entries(data).forEach(([key, value]) => {
+                formData.append(key, value)
+            })
+            try {
+                const response = await fetch(
+                    process.env.NEXT_PUBLIC_NEWT_FORM_ENDPOINT ?? '',
+                    {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            Accept: 'application/json',
+                        },
+                    },
+                )
+                if (response.ok) {
+                    handleToast()
+                    setContactFlg(true)
+                    setToast('送信完了しました！メールをご確認ください。')
+                } else {
+                    setContactFlg(false)
+                    setToast('送信に失敗しました。')
+                }
+            } catch (err) {
+                console.error(err)
+                setContactFlg(false)
+                setToast('送信に失敗しました。')
             }
-        })
-        .catch((err) => {
-            setLoading(false)
-            setMessageState(err.message)
-            console.log(err)
-        })
-        setLoading(false)
-    }
-    // 入力内容が更新されるたびにsetValueに入力内容を格納する
-    const handleChange = (e: | React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
-        setValue((prevInput) => ({
-            ...prevInput,
-            [e.target.name]: e.target.value,
-        }))
-    }
+        }
+    })
 
     return (
         <div id='contact' className='bg-transparent w-full text-[#eee]'>
@@ -79,39 +74,100 @@ const Contact = () => {
                     最後までご覧いただきありがとうございました。<br/>
                     もしこのサイトや私について何かコメントがありましたら、下記フォームをご利用ください。</p>
                 <div className="m-5 mx-auto w-[380px] md:w-[600px] xl:w-[900px]">
-                    <form onSubmit={handleSubmit}>
+                    <form action={process.env.NEXT_PUBLIC_NEWT_FORM_ENDPOINT} method="post" onSubmit={onSubmit}>
                         <div className="flex flex-col xl:flex-row xl:w-full xl:space-x-10 mb-3">
-                            <Input
-                                value={value.name}
-                                onChange={handleChange}
-                                id="name"
-                                name="name"
-                                label="お名前"
-                                placeholder="Name"
-                                error={!!errors.name}
-                                errorMessage={!!errors.name ? errors.name : ""}
-                            />
-                            <Input
-                                value={value.email}
-                                onChange={handleChange}
-                                id="email"
-                                name="email"
-                                label="メールアドレス"
-                                placeholder="your-email@example.com"
-                                error={!!errors.email}
-                                errorMessage={!!errors.email ? errors.email : ""}
-                            />
+                            <motion.div
+                                transition={{delay: 0.2}}
+                                initial={{ opacity: 0, y: 100 }}
+                                whileInView={{ opacity: 1, y: 0,
+                                transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
+                                viewport={{ once: true, amount: 0.8 }}
+                                className="flex flex-col xl:w-1/2"
+                            >
+                                <label className='FormLabel' htmlFor='name'>
+                                    お名前
+                                </label>
+                                <input
+                                    type='text'
+                                    id='name'
+                                    {...register(`name`, {
+                                        required: `※名前を入力してください`,
+                                        minLength: {
+                                            value: 2,
+                                            message: `※名前は2文字以上で入力してください`
+                                        },
+                                        maxLength: {
+                                            value: 20,
+                                            message: `※名前は20文字以内で入力してください`
+                                        }
+                                    })}
+                                    placeholder='Name'
+                                    className="FormBox"
+                                    area-describedby="error-name-required"
+                                />
+                                {errors?.name && (
+                                    <span id="error-name-required" aria-live="assertive">
+                                        {errors.name.message}
+                                    </span>
+                                )}
+                            </motion.div>
+                            <motion.div
+                                transition={{delay: 0.2}}
+                                initial={{ opacity: 0, y: 100 }}
+                                whileInView={{ opacity: 1, y: 0,
+                                transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
+                                viewport={{ once: true, amount: 0.8 }}
+                                className="flex flex-col xl:w-1/2"
+                            >
+                                <label className='FormLabel' htmlFor='email'>
+                                    メールアドレス
+                                </label>
+                                <input
+                                    type='email'
+                                    id='email'
+                                    {...register(`email`, {
+                                        required: `※メールアドレスを入力してください`,
+                                        pattern: {
+                                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                            message: `※有効なメールアドレスを入力してください`,
+                                        },
+                                    })}
+                                    placeholder='your-email@example.com'
+                                    className="FormBox"
+                                    area-describedby="error-email-required"
+                                />
+                                {errors?.email && (
+                                    <span id="error-email-required" aria-live="assertive">
+                                        {errors.email.message}
+                                    </span>
+                                )}
+                            </motion.div>
                         </div>
-                        <TextArea
-                            value={value.message}
-                            onChange={handleChange}
-                            id="message"
-                            name="message"
-                            label="メッセージ"
-                            placeholder="Your message here..."
-                            error={!!errors.message}
-                            errorMessage={!!errors.message ? errors.message : ""}
-                        />
+                        <motion.div
+                            transition={{delay: 0.2}}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0,
+                            transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            className="flex flex-col mb-3"
+                        >
+                            <label htmlFor='message' className="FormLabel">
+                                メッセージ
+                            </label>
+                            <textarea
+                                id='message'
+                                {...register(`message`, { required: `※メッセージを入力してください` })}
+                                rows={5}
+                                placeholder='ご自由に入力ください'
+                                className='TextAREA'
+                                area-describedby="error-message-required"
+                            ></textarea>
+                            {errors?.message && (
+                                <span id="error-message-required" aria-live="assertive">
+                                    {errors.message.message}
+                                </span>
+                            )}
+                        </motion.div>
                         <motion.div
                             transition={{delay: 0.2}}
                             initial={{ opacity: 0, y: 100 }}
@@ -119,22 +175,29 @@ const Contact = () => {
                             transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
                             viewport={{ once: true, amount: 0.8 }}
                         >
-                            <button type="submit" className="SubmitBtn" disabled={loading}>
-                                {loading !== true ? (
-                                    "送　　信"
-                                ): (
-                                    <RiLoader5Fill className="h-8 w-8 animate-spin" />
-                                )}
+                            <button type="submit" className="SubmitBtn">
+                                    送 信
                             </button>
-                                {success !== false ? (
-                                    <p className="font-light text-lg text-emerald-400">
-                                        {messageState || ""}
-                                    </p>
-                                ) : (
-                                    <p className="font-light text-lg text-red-500">
-                                        {messageState || ""}
-                                    </p>
-                                )}
+                            
+                            {!ContactFlg == false ? (
+                                showToast==true && (
+                                    <motion.div
+                                        transition={{delay: 0.2}}
+                                        initial={{ opacity: 0, top: -100 }}
+                                        animate={{ opacity: 1, top: 128, transition: { duration: 0.8 , type: 'spring', bounce: 0.4 }}}
+                                        exit={{ opacity: 0, top: 128 }}
+                                        className="bg-[#eee] fixed z-20 top-32 right-10 bg rounded-3xl shadow-GrayA p-6"
+                                    >
+                                        <p className="font-normal text-lg text-emerald-500">
+                                            {toast}
+                                        </p>
+                                    </motion.div>
+                                )
+                            ) : (
+                                <p className="font-light text-lg text-red-500">
+                                    {toast}
+                                </p>
+                            )}
                         </motion.div>
                     </form>
                 </div>
