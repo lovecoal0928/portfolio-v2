@@ -7,7 +7,7 @@ const Loading = () => {
         <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
         >
             <div className='LoadingBG'>
                 <span className='absolute top-0 left-0 w-full h-screen -z-10 bg-[url("/background.svg")]'/>
