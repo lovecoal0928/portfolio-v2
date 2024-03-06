@@ -76,7 +76,7 @@ const Profile = () => {
                                     viewport={{ once: true, amount: 0.8 }}
                                     className='SocialBtn1 z-10'><MdEditNote className='Icon-md'/>Qiita</motion.div>
                             </a>
-                            <a href='https://www.nicovideo.jp/user/71360133' target='_blank'>
+                            <a href='https://nicovideo.jp/user/71360133/video?ref=pc_userpage_menu' target='_blank'>
                                 <motion.div
                                     transition={{delay: 0.4}}
                                     initial={{ opacity: 0, y: 200 }}
