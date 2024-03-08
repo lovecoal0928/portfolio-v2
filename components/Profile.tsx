@@ -44,7 +44,7 @@ const Profile = () => {
                             transition:{type: 'spring', bounce: 0.4, duration: 0.8} }}
                             viewport={{ once: true, amount: 0.8 }}
                             className='lg:text-lg z-10'>
-                            アメリカ生まれだけど純血日本人な名古屋育ちのエンジニア。<br/>
+                            アメリカ生まれの日本人、名古屋育ちのエンジニア。<br/>
                             中学校の頃初めてのPCを家に迎え、CG映像制作、動画制作、ライブ配信活動を経験。<br/>
                             専門学校に入学してからプログラミングの勉強を始めました。
                         </motion.div>

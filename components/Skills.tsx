@@ -26,11 +26,11 @@ ChartJS.register(
 const Skills = () => {
     const fData = {
         // front-end
-        labels: ['HTML/CSS', 'JavaScript', 'Vue.js', 'React/TypeScript', 'WordPress', 'CSS FW'],
+        labels: ['HTML/CSS', 'TypeScript', 'Vue.js', 'React/Nextjs', 'WordPress', 'CSS FW'],
         datasets: [
             {
                 label: 'フロントエンド',
-                data: [3,4,2,4,1,4],
+                data: [4,4,2,4,2,4],
                 backgroundColor: 'rgba(255,110,90,0.2)',
                 borderColor: 'rgb(255,110,90)',
                 borderWidth: 3,
@@ -40,11 +40,11 @@ const Skills = () => {
     }
     const bData = {
         // back-end
-        labels: ['PostgreSQL', 'Python', 'Go', 'Firebase/GCP', 'PHP', 'WEB API'],
+        labels: ['PostgreSQL', 'Python', 'Go', 'Firebase/GCP', 'Prisma', 'Laravel'],
         datasets: [
             {
                 label: 'バックエンド',
-                data: [3,3,2,3,1,4],
+                data: [3,3,2,3,4,3],
                 backgroundColor: 'rgba(70,210,160,0.2)',
                 borderColor: 'rgb(70,210,160)',
                 borderWidth: 3,
@@ -54,11 +54,11 @@ const Skills = () => {
     }
     const dData = {
         // design
-        labels: ['Figma', 'Unity/C#', 'Blender', 'MMD', 'Idea', 'Money'],
+        labels: ['CI/CD(Git)', 'Unity/C#', 'Blender', 'Figma', 'Kotlin', 'MMD'],
         datasets: [
             {
                 label: 'その他',
-                data: [4,2,2,4,4,1],
+                data: [4,2,2,5,3,3],
                 backgroundColor: 'rgba(170,110,255,0.2)',
                 borderColor: 'rgb(170,110,255)',
                 borderWidth: 3,
@@ -111,8 +111,8 @@ const Skills = () => {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true, amount: 0.8 }}
                             className='RadarText'>
-                            　最初はHTMLとCSS、Javascriptから始め、学校の課題や個人制作でアーティストのファンサイトやランディングページを作っていました。<br/>
-                            　その後親戚から頂いたレストランのホームページの案件で1～2ヶ月ほどWordPressを触らせていただきました。<br/>
+                            　HTMLとCSS、Javascriptから始め、学校の課題や個人制作でアーティストのファンサイトやランディングページを作っていました。<br/>
+                            　レストランのホームページの案件で1～2ヶ月ほどWordPressを触り、その後Typescript、Reactを習得。<br/>
                             　現在はNextjsを使いTypeScriptとTailwindCSSを活用してフロントエンド開発をしています。
                         </motion.p>
                     </motion.div>
@@ -141,9 +141,9 @@ const Skills = () => {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true, amount: 0.8 }}
                             className='RadarText'>
-                            　学校の授業でPHPを触ったのが最初でした。個人開発ではPythonとDjangoをよく使っていました。<br/>
-                            　もっと幅広いWebアプリ制作をするためDjango REST FrameworkでRESTAPIとpostgreSQLを勉強しました。<br/>
-                            　最近はGoogleCloudの豊富なAPIライブラリを勉強するためGCPとFirebaseの勉強をしたり、最近業界で流行りのGo言語の勉強をしています。
+                            　学校の授業でPHPを触ったのが最初。個人開発ではとDjango(Python)とGo、Prismaをよく使っています。<br/>
+                            　幅広いWebアプリ制作をするためDjango REST FrameworkでRESTAPIとpostgreSQLを勉強しました。<br/>
+                            　最近はGoogleCloudの豊富なAPIライブラリを勉強するためGCPとFirebaseの勉強をしたりしています。
                         </motion.p>
                     </motion.div>
                     <motion.div
@@ -171,8 +171,8 @@ const Skills = () => {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true, amount: 0.8 }}
                             className='RadarText'>
-                            　FigmaとFigjamを使ってアプリの企画設計とデザインを考えるのが好きで、よく使っています。欲を言えばAdobeシリーズのアプリケーションも使ってみたいのですがちょっと高くて買う勇気が出ないです（笑）。<br/>
-                            　最近Unityを勉強し始め簡単な3Dゲームを作ったりして遊んでいました。BenderやMMDは昔の趣味の延長線上で触っていましたが最近は動画を作る時間が取れなくて悩んでいます。
+                            　FigmaとFigjamを使ってアプリの企画設計とデザインを考えるのが好きで、よく使っています。欲を言えばAdobeシリーズのアプリケーションも使ってみたいのですがちょっと高くてなぁ（笑）。<br/>
+                            　PostManを使ったテストを行うことも最近は多いです。BlenderやMMDは昔の趣味の延長線上で触っていましたが最近は動画を作る時間が取れなくて悩んでいます。
                         </motion.p>
                     </motion.div>
                 </div>
